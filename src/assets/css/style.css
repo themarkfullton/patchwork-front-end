@@ -306,6 +306,88 @@
   }
 }
 
+.createWrapper .createContent .workshopPatchContainer {
+  width: 100%;
+}
+
+.createWrapper .createContent .workshopPatchContainer .wsPatchImageCont {
+  text-align: center;
+  height: 50vw;
+  overflow: hidden;
+  margin: 3vw;
+}
+
+.createWrapper .createContent .workshopPatchContainer .wsPatchImageCont .wsPatchImageImage {
+  height: 100%;
+}
+
+.createWrapper .createContent .workshopPatchContainer .formGroup {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 3vw;
+}
+
+.createWrapper .createContent .workshopPatchContainer .formGroup input {
+  width: 60%;
+  padding: 1.5vw;
+  border: none;
+  background-color: #001524;
+  color: #fff;
+  border-radius: 5vw;
+  font-family: "Grandstander", cursive;
+}
+
+.createWrapper .createContent .workshopPatchContainer .formGroup input {
+  font-size: 13px;
+}
+
+@media screen and (min-width: 320px) {
+  .createWrapper .createContent .workshopPatchContainer .formGroup input {
+    font-size: calc( 13px + 5 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .createWrapper .createContent .workshopPatchContainer .formGroup input {
+    font-size: 18px;
+  }
+}
+
+.createWrapper .createContent .workshopPatchContainer .wsTitle {
+  width: 100%;
+  text-align: center;
+  font-family: "Freckle Face", cursive;
+  font-weight: bolder;
+  color: #001524;
+  letter-spacing: 0.25em;
+  margin-bottom: 5vw;
+}
+
+.createWrapper .createContent .workshopPatchContainer .wsTitle {
+  font-size: 19px;
+}
+
+@media screen and (min-width: 320px) {
+  .createWrapper .createContent .workshopPatchContainer .wsTitle {
+    font-size: calc( 19px + 8 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .createWrapper .createContent .workshopPatchContainer .wsTitle {
+    font-size: 27px;
+  }
+}
+
+.createWrapper .createContent .workshopPatchContainer .wsName {
+  font-family: "Grandstander", cursive;
+}
+
 .createWrapper .createContent .submitBtn {
   width: 100%;
   margin-top: 5vw;
@@ -445,5 +527,25 @@ body h2 {
 body b {
   font-weight: bolder;
   color: #001524;
+}
+
+body .Argyle {
+  color: #fcd59c;
+}
+
+body .Checkered {
+  color: #c1cdcd;
+}
+
+body .Denim {
+  color: #00bfff;
+}
+
+body .Plaid {
+  color: #a68064;
+}
+
+body .Polkadot {
+  color: #cd2626;
 }
 /*# sourceMappingURL=style.css.map */

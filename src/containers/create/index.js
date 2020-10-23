@@ -5,8 +5,8 @@ class Create extends React.Component {
     constructor(props) {
     super(props);
         this.state = {
-            name: "unassigned",
-            owner: "unassigned",
+            name: "???",
+            owner: "Anonymous",
             core: "unassigned",
             texture: "unassigned",
             firstEssence: 0,
@@ -26,6 +26,8 @@ class Create extends React.Component {
         this.onRecyclePatch = this.onRecyclePatch.bind(this);
         this.largestTrait = this.largestTrait.bind(this);
         this.tallyTemperment = this.tallyTemperment.bind(this);
+        this.onNameChange = this.onNameChange.bind(this);
+        this.onCreatorChange = this.onCreatorChange.bind(this);
   }
 
     onCoreChange(e) {
@@ -46,6 +48,14 @@ class Create extends React.Component {
 
     onThirdEssenceChange(e) {
         this.setState({ thirdEssence: e.target.value });
+    }
+
+    onNameChange(e) {
+        this.setState({ name: e.target.value });
+    }
+
+    onCreatorChange(e) {
+        this.setState({ creator: e.target.value });
     }
 
     onSubmitPatch() {
@@ -178,6 +188,8 @@ class Create extends React.Component {
                 onThirdEssenceChange={this.onThirdEssenceChange}
                 onSubmitPatch={this.onSubmitPatch}
                 onRecyclePatch={this.onRecyclePatch}
+                onNameChange={this.onNameChange}
+                onCreatorChange={this.onCreatorChange}
             />
       </div>
     );

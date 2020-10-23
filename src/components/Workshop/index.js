@@ -16,16 +16,24 @@ const Workshop = (props) => {
             <p>{props.patchImage}</p>
             <div className="workshopPatchContainer">
                 <div className="wsPatchImageCont">
-                    <img src={patchSrc} />
+                    <img className="wsPatchImageImage" src={patchSrc} />
                 </div>
                 <div className="wsTitle">
-                    <h3>{props.name} the {props.texture} {props.pattern}</h3>
+                    <h3><span className={props.texture}>{props.name}</span> the <span className={props.texture}>{props.texture}</span> {props.pattern}</h3>
                 </div>
-                <div>
-                    <h4>Please Give Me a Name!</h4>
+                <div className="wsName">                    
+                    <div className="formGroup">
+                        <label htmlFor="name">My Name</label>
+                        <input type="text" className="form-control" value={props.name} onChange={props.onNameChange} required />
+                    </div>
+                    <div className="formGroup">
+                        <label htmlFor="name">Your Name</label>
+                        <input type="text" className="form-control" value={props.creator} onChange={props.onCreatorChange} required />
+                    </div>
                 </div>
 
                 <button className="submitBtn" onClick={props.onRecyclePatch}>Recycle</button>
+                <button className="submitBtn" onClick={props.onRecyclePatch}>Create</button>
             </div>
         </div>
     ): (
