@@ -13,7 +13,7 @@ const Workshop = (props) => {
             <p>Here's your new friend! If you like them, give them a name! If not, head back to the drawing board!</p>
             <div className="workshopPatchContainer">
                 <div className="wsPatchImageCont">
-                    <img src="" />
+                    <img src={props.patchImage} />
                 </div>
             </div>
         </div>
@@ -25,14 +25,14 @@ const Workshop = (props) => {
                 <h2>Select a Core!</h2>
                 <div className="optionDiv">
                     {CoreList.map((core, idx) => {
-                        var optionButtonClass = core.name == this.state.core ? "optionButton active" : "optionButton";
+                        var optionButtonClass = core.name == props.core ? "optionButton active" : "optionButton";
                             
                     return (
                         <div className="optionContainer" key={idx}>
                             <div className="optionImageContainer">
                                 <img className="optionImageImage" style={{ width: 125, height: 125}} src={core.image} />
                             </div>
-                            <button className={optionButtonClass} onClick={this.onCoreChange} value={core.name}>{core.name}</button>
+                            <button className={optionButtonClass} onClick={props.onCoreChange} value={core.name}>{core.name}</button>
                         </div>
                     )
                 })}
@@ -43,14 +43,14 @@ const Workshop = (props) => {
                 <h2>Select a Texture!</h2>
                 <div className="optionDiv">
                     {TextureList.map((texture, idx) => {
-                        var optionButtonClass = texture.name == this.state.texture ? "optionButton active" : "optionButton";
+                        var optionButtonClass = texture.name == props.texture ? "optionButton active" : "optionButton";
 
                         return (
                             <div className="optionContainer" key={idx}>
                                 <div className="optionImageContainer">
                                     <img className="optionImageImage" style={{ width: 100, height: 100 }} src={texture.image} />
                                 </div>
-                                <button className={optionButtonClass} onClick={this.onTextureChange} value={texture.name}>{texture.name}</button>
+                                <button className={optionButtonClass} onClick={props.onTextureChange} value={texture.name}>{texture.name}</button>
                             </div>
                     )
                 })}
@@ -59,34 +59,35 @@ const Workshop = (props) => {
                 <hr />
                 <br />
                 <h2>Select One Essence From Each List!</h2>
-                <select className="dropdown" onChange={this.onFirstEssenceChange} >
+                <select className="dropdown" onChange={props.onFirstEssenceChange} >
                     {FirstEssence.map((essence, idx) => {
                         return (
                             <option className="dropOpt" key={idx} value={essence.val}>{essence.name}</option>
                         )
                     })}
                 </select>
-                <select className="dropdown" onChange={this.onSecondEssenceChange} >
+                <select className="dropdown" onChange={props.onSecondEssenceChange} >
                     {SecondEssence.map((essence, idx) => {
                         return (
                             <option className="dropOpt" key={idx} value={essence.val}>{essence.name}</option>
                         )
                     })}
                 </select>
-                <select className="dropdown" onChange={this.onThirdEssenceChange} >
+                <select className="dropdown" onChange={props.onThirdEssenceChange} >
                     {ThirdEssence.map((essence, idx) => {
                         return (
-                            <option className="dropOpt" key={idx} value={essence.val} dataname={essence.name}>{essence.name}</option>
+                            <option className="dropOpt" key={idx} value={essence.val}>{essence.name}</option>
                         )
                     })}
                 </select>
                 <br />
-                <button className="submitBtn" onClick={this.submitPatch}>View My Patch!</button>
+                <button className="submitBtn" onClick={props.submitPatch}>View My Patch!</button>
 
-                <p><b>First Essence:</b> {this.state.firstEssence}</p>
-                <p><b>Second Essence:</b> {this.state.secondEssence}</p>
-                <p><b>Third Essence:</b> {this.state.thirdEssence}</p>
-                <p><b>Temperment:</b> {this.state.temperment}</p>
+                <p><b>Core:</b> {props.core}</p>
+                <p><b>Texture:</b> {props.texture}</p>
+                <p><b>First Essence:</b> {props.firstEssence}</p>
+                <p><b>Second Essence:</b> {props.secondEssence}</p>
+                <p><b>Third Essence:</b> {props.thirdEssence}</p>
             </div>
         );
 }

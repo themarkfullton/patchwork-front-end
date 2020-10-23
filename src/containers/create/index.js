@@ -178,7 +178,8 @@ class Create extends React.Component {
                 onFirstEssenceChange={this.onFirstEssenceChange}
                 onSecondEssenceChange={this.onSecondEssenceChange}
                 onThirdEssenceChange={this.onThirdEssenceChange}
-                submitPatch={this.submitPatch}
+                patchImage={this.state.patchImage}
+                submitPatch={this.state.submitPatch}
             />
       </div>
     );
