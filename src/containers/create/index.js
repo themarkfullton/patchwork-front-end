@@ -85,25 +85,25 @@ class Create extends React.Component {
 
         switch (trait) {
             case 0:
-                this.setState({ temperment: "sassy" });
+                this.setState({ temperment: "Sassy" });
                 break;
             case 1:
-                this.setState({ temperment: "passionate" });
+                this.setState({ temperment: "Passionate" });
                 break;
             case 2:
-                this.setState({ temperment: "comical" });
+                this.setState({ temperment: "Comical" });
                 break;
             case 3:
-                this.setState({ temperment: "despondent" });
+                this.setState({ temperment: "Despondent" });
                 break;
             case 4:
-                this.setState({ temperment: "analytical" });
+                this.setState({ temperment: "Analytical" });
                 break;
             case 5:
-                this.setState({ temperment: "idealistic" });
+                this.setState({ temperment: "Idealistic" });
                 break;
             case 6:
-                this.setState({ temperment: "gentle" });
+                this.setState({ temperment: "Gentle" });
                 break;
         }
     }

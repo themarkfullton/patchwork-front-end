@@ -1,0 +1,30 @@
+[
+    {
+        "temperment":"Sassy",
+        "greeting":"Tell me I'm fabulous."
+    },
+    {
+        "temperment":"Passionate",
+        "greeting":"You seem pretty cool!"
+    },
+    {
+        "temperment":"Comical",
+        "greeting":"Right, so I have this doctor's note excempting me from heavy lifting..."
+    },
+    {
+        "temperment":"Despondent",
+        "greeting":"Our quest is in vain."
+    },
+    {
+        "temperment":"Analytical",
+        "greeting":"Even if it all is just a simulation, I am pleased to meet you."
+    },
+    {
+        "temperment":"Idealistic",
+        "greeting":"What grand deed have you created me to accomplish?"
+    },
+    {
+        "temperment":"Gentle",
+        "greeting":"You seem lovely!"
+    }
+]

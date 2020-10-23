@@ -61,12 +61,42 @@
 
       .wsPatchImageCont {
         text-align: center;
-        height: 50vw;
-        overflow: hidden;
+        height: 40vw;
         margin: 3vw;
 
+        &:hover .imageSpeech {
+          animation: rock 2s infinite ease-in-out;
+        }
+
+        .imageSpeech {
+          position: relative;
+          top: 0;
+          width: 60%;
+          margin: 0 auto;
+          background-color: rgba(8, 48, 54, 0.75);
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 1vw 0.5vw;
+          z-index: 3;
+          font-family: $body-font;
+          @include fluid-type(320px, 1200px, 12px, 25px);
+
+          &::after {
+            content: " ";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: rgba(8, 48, 54, 0.75) transparent transparent
+              transparent;
+          }
+        }
+
         .wsPatchImageImage {
-          height: 100%;
+          height: 90%;
         }
       }
 
@@ -74,16 +104,22 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        margin: 3vw;
+        margin: 1vw;
+        @include fluid-type(320px, 1200px, 18px, 25px);
+
+        label {
+          align-self: center;
+        }
 
         input {
-          width: 60%;
-          padding: 1.5vw;
+          width: 80%;
+          padding: 2vw;
           border: none;
           background-color: $link-colour;
           color: #fff;
           border-radius: 5vw;
           font-family: $body-font;
+          font-weight: bolder;
           @include fluid-type(320px, 1200px, 13px, 18px);
         }
       }
@@ -106,8 +142,8 @@
 
     .submitBtn {
       width: 100%;
-      margin-top: 5vw;
-      margin-bottom: 2vw;
+      margin-top: 3vw;
+      margin-bottom: 1vw;
       padding: 1vw;
       border-radius: 25px;
       border: 5px $background-colour dashed;
@@ -124,6 +160,10 @@
         background-color: $tertiary-colour;
         border: none;
       }
+    }
+
+    .small {
+      width: 40%;
     }
   }
 }

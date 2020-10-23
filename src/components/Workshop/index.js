@@ -16,6 +16,7 @@ const Workshop = (props) => {
             <p>{props.patchImage}</p>
             <div className="workshopPatchContainer">
                 <div className="wsPatchImageCont">
+                    <p className="imageSpeech">Give me a name!</p>
                     <img className="wsPatchImageImage" src={patchSrc} />
                 </div>
                 <div className="wsTitle">
@@ -32,8 +33,10 @@ const Workshop = (props) => {
                     </div>
                 </div>
 
-                <button className="submitBtn" onClick={props.onRecyclePatch}>Recycle</button>
-                <button className="submitBtn" onClick={props.onRecyclePatch}>Create</button>
+                <div className="formGroup">
+                <button className="submitBtn small" onClick={props.onRecyclePatch}>Recycle</button>
+                    <button className="submitBtn small" onClick={props.onRecyclePatch}>Create</button>
+                    </div>
             </div>
         </div>
     ): (

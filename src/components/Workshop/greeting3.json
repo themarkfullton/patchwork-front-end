@@ -1,0 +1,30 @@
+[
+    {
+        "temperment":"Sassy",
+        "greeting":"What're you looking at?"
+    },
+    {
+        "temperment":"Passionate",
+        "greeting":"I live to serve!"
+    },
+    {
+        "temperment":"Comical",
+        "greeting":"All that fabric and this is what you came up with?"
+    },
+    {
+        "temperment":"Despondent",
+        "greeting":"Life is meaningless."
+    },
+    {
+        "temperment":"Analytical",
+        "greeting":"Is free will truly free?"
+    },
+    {
+        "temperment":"Idealistic",
+        "greeting":"What adventure did you have in mind?"
+    },
+    {
+        "temperment":"Gentle",
+        "greeting":"Come now; chin up."
+    }
+]
