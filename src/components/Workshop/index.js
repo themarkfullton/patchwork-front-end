@@ -5,6 +5,7 @@ import FirstEssence from "./firstEssence.json";
 import SecondEssence from "./secondEssence.json";
 import ThirdEssence from "./thirdEssence.json";
 
+
 const Workshop = (props) => {
     var patchSrc = `/images/patches/${props.pattern}_${props.texture}.png`;
 

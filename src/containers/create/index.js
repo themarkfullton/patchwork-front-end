@@ -1,5 +1,9 @@
 import React from "react";
 import Workshop from "../../components/Workshop";
+import Greeting0 from "./greeting0.json";
+import Greeting1 from "./greeting1.json";
+import Greeting2 from "./greeting2.json";
+import Greeting3 from "./greeting3.json";
 
 class Create extends React.Component {
     constructor(props) {
@@ -7,13 +11,14 @@ class Create extends React.Component {
         this.state = {
             name: "???",
             owner: "Anonymous",
-            core: "unassigned",
-            texture: "unassigned",
+            core: "Chaos",
+            texture: "Argyle",
             firstEssence: 0,
             secondEssence: 3,
             thirdEssence: 6,
-            pattern: "nobody",
+            pattern: "none",
             temperment: "none",
+            greeting: "none",
             submitPatch: false
         };
 
@@ -28,6 +33,7 @@ class Create extends React.Component {
         this.tallyTemperment = this.tallyTemperment.bind(this);
         this.onNameChange = this.onNameChange.bind(this);
         this.onCreatorChange = this.onCreatorChange.bind(this);
+        this.createPatchGreeting = this.createPatchGreeting.bind(this);
   }
 
     onCoreChange(e) {
@@ -61,6 +67,7 @@ class Create extends React.Component {
     onSubmitPatch() {
         this.tallyTemperment();
         this.createPatchImage();
+        this.createPatchGreeting();
         this.setState({
             submitPatch: true
         })
@@ -167,6 +174,49 @@ class Create extends React.Component {
         }
     }
 
+    createPatchGreeting() {
+        var ranNum = Math.floor(Math.random() * 4);
+    var greetingList;
+    var patchGreeting;
+    switch (ranNum) {
+        case 0:
+            greetingList = Greeting0;
+            break;
+        case 1:
+            greetingList = Greeting1;
+            break;
+        case 2:
+            greetingList = Greeting2;
+            break;
+        case 3:
+            greetingList = Greeting3;
+            break
+    }
+    switch (props.temperment) {
+        case "Sassy":
+            patchGreeting = greetingList[0];
+            break;
+        case "Passionate":
+            patchGreeting = greetingList[1];
+            break;
+        case "Comical":
+            patchGreeting = greetingList[2];
+            break;
+        case "Despondent":
+            patchGreeting = greetingList[3];
+            break;
+        case "Analytical":
+            patchGreeting = greetingList[4];
+            break;
+        case "Idealistic":
+            patchGreeting = greetingList[5];
+            break;
+        case "Gentle":
+            patchGreeting = greetingList[6];
+            break;
+    }
+    }
+
     render() {
     return(
         <div className="createWrapper">
@@ -180,6 +230,7 @@ class Create extends React.Component {
                 thirdEssence={this.state.thirdEssence}
                 pattern={this.state.pattern}
                 temperment={this.state.temperment}
+                greeting={this.state.greeting}
                 submitPatch={this.state.submitPatch}
                 onCoreChange={this.onCoreChange}
                 onTextureChange={this.onTextureChange}
