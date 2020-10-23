@@ -14,6 +14,7 @@ class Create extends React.Component {
             thirdEssence: 6,
             pattern: "",
             temperment: "none",
+            patchImage: "unassigned",
             submitPatch: false
         };
 
@@ -50,6 +51,9 @@ class Create extends React.Component {
     submitPatch() {
         this.tallyTemperment();
         this.createPatchImage();
+        this.setState({
+            submitPatch: true
+        })
     }
 
     tallyTemperment() {
@@ -111,12 +115,48 @@ class Create extends React.Component {
 
         switch (this.state.core) {
             case "Chaos":
+                if (ranNum == 0) {
+                    this.setState({
+                        pattern: "smiley"
+                    })
+                }
+                else {
+                    this.setState({
+                        pattern: "mrbiggs"
+                    })
+                }
                 break;
             case "Time":
+                if (ranNum == 0) {
+                    this.setState({
+                        pattern: "nobody"
+                    })
+                }
+                else {
+                    this.setState({
+                        pattern: "tranquil"
+                    })
+                }
                 break;
             case "Wind":
+                if (ranNum == 0) {
+                    this.setState({
+                        pattern: "grumpypuff"
+                    })
+                }
+                else {
+                    this.setState({
+                        pattern: "slumpy"
+                    })
+                }
                 break;
         }
+
+        let patchSrc = `/images/patches/${this.state.pattern}_${this.state.texture}.png`;
+
+        this.setState({
+            patchImage: patchSrc
+        });
     }
     
     render() {
