@@ -34,40 +34,40 @@ class Create extends React.Component {
             <div className="createContent">
                 <h1>Make a New Friend!</h1>
                 <br />
-                <div className="createDocPicHolder">
-                    <img className="createDocPic" src={Doc} />
-                </div>
-                <p><b>Core:</b> {this.state.core}</p>
-                    <p><b>Texture:</b> {this.state.texture}</p>
-                    <p><b>Essences:</b> {this.state.firstEssence} , {this.state.secondEssence} , {this.state.thirdEssence}</p>
-                    <p><b>Name:</b> {this.state.name}</p>
-                    <p><b>Creator:</b> {this.state.creator}</p>
+
                 <h2>Select a Core!</h2>
                 <div className="optionDiv">
                 {CoreList.map((core, idx) => {
                     return (
                         <div className="optionContainer">
                             <div clasName="optionImageContainer">
-                                <img className="optionImageImage" src={core.image} />
+                                <img className="optionImageImage" style={{ width: 200, height: 200 }} src={core.image} />
                             </div>
                             <button className="optionButton" onClick={this.onCoreChange} value={core.name} key={idx}>{core.name}</button>
                         </div>
                     )
                 })}
                 </div>
+                <br />
+                <hr />
+                <br />
                 <h2>Select a Texture!</h2>
                 <div className="optionDiv">
                     {TextureList.map((texture, idx) => {
                         return (
                             <div className="optionContainer">
                                 <div clasName="optionImageContainer">
-                                    <img className="optionImageImage" src={texture.image} />
+                                    <img className="optionImageImage" style={{ width: 100, height: 100 }} src={texture.image} />
                                 </div>
                                 <button className="optionButton" onClick={this.onTextureChange} value={texture.name} key={idx}>{texture.name}</button>
                             </div>
                     )
                 })}
                 </div>
+                <br />
+                <hr />
+                <br />
+                <h2>Select One Essence From Each List!</h2>
             </div>
       </div>
     );

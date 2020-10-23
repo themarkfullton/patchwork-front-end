@@ -211,17 +211,6 @@
   width: 100%;
 }
 
-.createWrapper .createContent .createDocPicHolder {
-  margin: 0 auto;
-  height: 30vw;
-  overflow: hidden;
-  text-align: center;
-}
-
-.createWrapper .createContent .createDocPicHolder .createDocPic {
-  height: 100%;
-}
-
 .createWrapper .createContent .optionDiv {
   width: 100%;
   display: -webkit-box;
@@ -243,27 +232,47 @@
 
 .createWrapper .createContent .optionDiv .optionContainer {
   width: 30%;
-  background-color: red;
-}
-
-.createWrapper .createContent .optionDiv .optionContainer .optionImageContainer {
-  width: 30%;
-  overflow: hidden;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
-}
-
-.createWrapper .createContent .optionDiv .optionContainer .optionImageContainer .optionImageImage {
-  width: 30px;
-}
-
-.createWrapper .createContent .optionDiv .optionContainer .optionImageContainer .optionImageImage:hover {
-  -webkit-animation: rock 2s infinite ease-in-out;
-          animation: rock 2s infinite ease-in-out;
+  text-align: center;
 }
 
 .createWrapper .createContent .optionDiv .optionContainer .optionButton {
+  margin-top: 1vw;
+  margin-bottom: 2vw;
   width: 100%;
+  padding: 1vw;
+  border-radius: 25px;
+  border: 5px #001524 dashed;
+  background-color: #15616d;
+  font-family: "Grandstander", cursive;
+  color: #2ec4b6;
+  font-weight: bolder;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.createWrapper .createContent .optionDiv .optionContainer .optionButton {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 320px) {
+  .createWrapper .createContent .optionDiv .optionContainer .optionButton {
+    font-size: calc( 20px + 5 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .createWrapper .createContent .optionDiv .optionContainer .optionButton {
+    font-size: 25px;
+  }
+}
+
+.createWrapper .createContent .optionDiv .optionContainer .optionButton:hover {
+  cursor: pointer;
+  color: #15616d;
+  background-color: #2ec4b6;
+  border: none;
+  -webkit-animation: rock 2s infinite ease-in-out;
+          animation: rock 2s infinite ease-in-out;
 }
 
 @keyframes rock {
@@ -315,6 +324,7 @@ body .content {
 }
 
 body hr {
+  margin: 5vw 0;
   border: none;
   border-top: 5px dashed #001524;
 }
