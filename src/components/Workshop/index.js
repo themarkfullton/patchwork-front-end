@@ -17,11 +17,10 @@ const Workshop = (props) => {
             <p>{props.patchImage}</p>
             <div className="workshopPatchContainer">
                 <div className="wsPatchImageCont">
-                    <p className="imageSpeech">{props.greeting}</p>
                     <img className="wsPatchImageImage" src={patchSrc} />
                 </div>
                 <div className="wsTitle">
-                    <h3><span className={props.texture}>{props.name}</span> the <span className={props.texture}>{props.texture}</span> {props.pattern}</h3>
+                    <h3><span className={props.texture}>{props.name}</span> the {props.temperment} <span className={props.texture}>{props.texture}</span> {props.pattern}</h3>
                 </div>
                 <div className="wsName">                    
                     <div className="formGroup">

@@ -1,9 +1,5 @@
 import React from "react";
 import Workshop from "../../components/Workshop";
-import Greeting0 from "./greeting0.json";
-import Greeting1 from "./greeting1.json";
-import Greeting2 from "./greeting2.json";
-import Greeting3 from "./greeting3.json";
 
 class Create extends React.Component {
     constructor(props) {
@@ -18,7 +14,6 @@ class Create extends React.Component {
             thirdEssence: 6,
             pattern: "none",
             temperment: "none",
-            greeting: "none",
             submitPatch: false
         };
 
@@ -33,7 +28,6 @@ class Create extends React.Component {
         this.tallyTemperment = this.tallyTemperment.bind(this);
         this.onNameChange = this.onNameChange.bind(this);
         this.onCreatorChange = this.onCreatorChange.bind(this);
-        this.createPatchGreeting = this.createPatchGreeting.bind(this);
     }
     
     componentDidMount() {
@@ -71,7 +65,6 @@ class Create extends React.Component {
     onSubmitPatch() {
         this.tallyTemperment();
         this.createPatchImage();
-        this.createPatchGreeting();
         this.setState({
             submitPatch: true
         })
@@ -180,66 +173,6 @@ class Create extends React.Component {
         }
     }
 
-    createPatchGreeting() {
-        // var ranNum = Math.floor(Math.random() * 4);
-        // var greetingList = Greeting0;
-        
-    // switch (ranNum) {
-    //     case 0:
-    //         greetingList = Greeting0;
-    //         break;
-    //     case 1:
-    //         greetingList = Greeting1;
-    //         break;
-    //     case 2:
-    //         greetingList = Greeting2;
-    //         break;
-    //     case 3:
-    //         greetingList = Greeting3;
-    //         break
-    // }
-        this.setState({
-            greeting: "Does this even add?"
-        });
-    // switch (this.state.temperment) {
-    //     case "Sassy":
-    //         this.setState({
-    //             greeting: Greeting0[0].greeting
-    //         })
-    //         break;
-    //     case "Passionate":
-    //         this.setState({
-    //             greeting: Greeting0[1].greeting
-    //         })
-    //         break;
-    //     case "Comical":
-    //         this.setState({
-    //             greeting: Greeting0[2].greeting
-    //         })
-    //         break;
-    //     case "Despondent":
-    //         this.setState({
-    //             greeting: Greeting0[3].greeting
-    //         })
-    //         break;
-    //     case "Analytical":
-    //         this.setState({
-    //             greeting: Greeting0[4].greeting
-    //         })
-    //         break;
-    //     case "Idealistic":
-    //         this.setState({
-    //             greeting: Greeting0[5].greeting
-    //         })
-    //         break;
-    //     case "Gentle":
-    //         this.setState({
-    //             greeting: Greeting0[6].greeting
-    //         })
-    //         break;
-    //     }
-    }
-
     render() {
     return(
         <div className="createWrapper">
@@ -253,7 +186,6 @@ class Create extends React.Component {
                 thirdEssence={this.state.thirdEssence}
                 pattern={this.state.pattern}
                 temperment={this.state.temperment}
-                greeting={this.state.greeting}
                 submitPatch={this.state.submitPatch}
                 onCoreChange={this.onCoreChange}
                 onTextureChange={this.onTextureChange}
