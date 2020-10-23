@@ -24,6 +24,7 @@ class Create extends React.Component {
         this.onFirstEssenceChange = this.onFirstEssenceChange.bind(this);
         this.onSecondEssenceChange = this.onSecondEssenceChange.bind(this);
         this.onThirdEssenceChange = this.onThirdEssenceChange.bind(this);
+        this.submitPatch = this.submitPatch.bind(this);
   }
 
     onCoreChange(e) {
@@ -45,6 +46,10 @@ class Create extends React.Component {
     onThirdEssenceChange(e) {
         this.setState({ thirdEssence: e.target.value });
     }
+
+    submitPatch(e) {
+        
+    }
     
     render() {
     return(
@@ -61,7 +66,7 @@ class Create extends React.Component {
                     return (
                         <div className="optionContainer" key={idx}>
                             <div className="optionImageContainer">
-                                <img className="optionImageImage" style={{ width: 200, height: 200 }} src={core.image} />
+                                <img className="optionImageImage" style={{ width: 125, height: 125}} src={core.image} />
                             </div>
                             <button className={optionButtonClass} onClick={this.onCoreChange} value={core.name}>{core.name}</button>
                         </div>
@@ -112,14 +117,7 @@ class Create extends React.Component {
                     })}
                 </select>
                 <br />
-                <hr />
-                <br />
-                <h2>Does This Look Okay?</h2>
-                <p><b>Core: </b>{this.state.core}</p>
-                <p><b>Texture: </b>{this.state.texture}</p>
-                <p><b>Essence One: </b>{this.state.firstEssence}</p>
-                <p><b>Essence Two: </b>{this.state.secondEssence}</p>
-                <p><b>Essence Three: </b>{this.state.thirdEssence}</p>
+                <button className="submitBtn" onClick={this.submitPatch}>View My Patch!</button>
             </div>
       </div>
     );

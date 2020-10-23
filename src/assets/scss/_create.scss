@@ -44,6 +44,41 @@
         }
       }
     }
+
+    .dropdown {
+      width: 100%;
+      padding: 1vw;
+      margin: 0 auto;
+      margin-bottom: 1vw;
+      font-family: $body-font;
+      font-weight: bolder;
+      background-color: $tertiary-colour;
+      border-radius: 25px;
+      @include fluid-type(320px, 1200px, 20px, 30px);
+    }
+
+    .submitBtn {
+      width: 100%;
+      margin-top: 5vw;
+      margin-bottom: 2vw;
+      padding: 1vw;
+      border-radius: 25px;
+      border: 5px $background-colour dashed;
+      background-color: $secondary-colour;
+      font-family: $body-font;
+      color: $tertiary-colour;
+      font-weight: bolder;
+      @include transition-time;
+      @include fluid-type(320px, 1200px, 20px, 25px);
+
+      &:hover {
+        cursor: pointer;
+        color: $secondary-colour;
+        background-color: $tertiary-colour;
+        border: none;
+        animation: rock 2s infinite ease-in-out;
+      }
+    }
   }
 }
 
