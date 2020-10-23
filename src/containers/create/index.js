@@ -1,6 +1,9 @@
 import React from "react";
 import CoreList from "./cores.json";
 import TextureList from "./textures.json";
+import FirstEssence from "./firstEssence.json";
+import SecondEssence from "./secondEssence.json";
+import ThirdEssence from "./thirdEssence.json"; 
 import Doc from "./doc.png";
 
 class Create extends React.Component {
@@ -18,6 +21,9 @@ class Create extends React.Component {
 
         this.onCoreChange = this.onCoreChange.bind(this);
         this.onTextureChange = this.onTextureChange.bind(this);
+        this.onFirstEssenceChange = this.onFirstEssenceChange.bind(this);
+        this.onSecondEssenceChange = this.onSecondEssenceChange.bind(this);
+        this.onThirdEssenceChange = this.onThirdEssenceChange.bind(this);
   }
 
     onCoreChange(e) {
@@ -26,6 +32,18 @@ class Create extends React.Component {
     
     onTextureChange(e) {
         this.setState({ texture: e.target.value });
+    }
+
+    onFirstEssenceChange(e) {
+        this.setState({ firstEssence: e.target.value });
+    }
+
+    onSecondEssenceChange(e) {
+        this.setState({ secondEssence: e.target.value });
+    }
+
+    onThirdEssenceChange(e) {
+        this.setState({ thirdEssence: e.target.value });
     }
     
     render() {
@@ -68,6 +86,36 @@ class Create extends React.Component {
                 <hr />
                 <br />
                 <h2>Select One Essence From Each List!</h2>
+                <select className="dropdown" onChange={this.onFirstEssenceChange} >
+                    {FirstEssence.map((essence, idx) => {
+                        return (
+                            <option className="dropOpt" key={idx} value={essence.val}>{essence.name}</option>
+                        )
+                    })}
+                </select>
+                <select className="dropdown" onChange={this.onSecondEssenceChange} >
+                    {SecondEssence.map((essence, idx) => {
+                        return (
+                            <option className="dropOpt" key={idx} value={essence.val}>{essence.name}</option>
+                        )
+                    })}
+                </select>
+                <select className="dropdown" onChange={this.onThirdEssenceChange} >
+                    {ThirdEssence.map((essence, idx) => {
+                        return (
+                            <option className="dropOpt" key={idx} value={essence.val} dataname={essence.name}>{essence.name}</option>
+                        )
+                    })}
+                </select>
+                <br />
+                <hr />
+                <br />
+                <h2>Does This Look Okay?</h2>
+                <p><b>Core: </b>{this.state.core}</p>
+                <p><b>Texture: </b>{this.state.texture}</p>
+                <p><b>Essence One: </b>{this.state.firstEssence}</p>
+                <p><b>Essence Two: </b>{this.state.secondEssence}</p>
+                <p><b>Essence Three: </b>{this.state.thirdEssence}</p>
             </div>
       </div>
     );
