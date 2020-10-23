@@ -10,6 +10,7 @@ class Header extends React.Component {
     state = {
         prevNum: 0,
         currentHeader: Argyle,
+        currentName: "Argyle",
     }
 
     changeHeader = () => {
@@ -23,34 +24,45 @@ class Header extends React.Component {
         switch (randomNum) {
             case 1:
                 this.setState({
+                    prevNum: randomNum,
                     currentHeader: Argyle,
+                    currentName: "Argyle"
                 });
                 break;
             case 2:
                 this.setState({
+                    prevNum: randomNum,
                     currentHeader: Checkered,
+                    currentName: "Checkered"
                 });
                 break;
             case 3:
                 this.setState({
+                    prevNum: randomNum,
                     currentHeader: Denim,
+                    currentName: "Denim"
                 });
                 break;
             case 4:
                 this.setState({
+                    prevNum: randomNum,
                     currentHeader: Plaid,
+                    currentName: "Plaid",
                 });
                 break;
             case 5:
                 this.setState({
+                    prevNum: randomNum,
                     currentHeader: Polkadot,
+                    currentName: "PolkaDot",
                 });
                 break;
             default:
                 this.setState({
-                    currentHeader: Argyle
+                    prevNum: randomNum,
+                    currentHeader: Argyle,
+                    currentName: "Argyle",
                 });
-                break;
         }
     }
     
@@ -59,7 +71,7 @@ class Header extends React.Component {
             <div className="headerWrapper">
                 <div className="headerContent">
                     <div className="headerImage">
-                        <p className="imageSpeech">Click me!</p>
+                        <p className="imageSpeech">We are <b>{this.state.currentName}</b>! Click us!</p>
                         <img src={this.state.currentHeader} className="headerImageImage" onClick={this.changeHeader} />
                     </div>
                     <div className="headerTitle">

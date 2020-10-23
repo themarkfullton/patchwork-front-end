@@ -26,7 +26,7 @@
   visibility: hidden;
   position: relative;
   top: 0;
-  width: 20%;
+  width: 70%;
   margin: 0 auto;
   background-color: rgba(21, 97, 109, 0.75);
   color: #fff;
@@ -81,6 +81,7 @@
 }
 
 .headerWrapper .headerContent .headerTitle h1 {
+  letter-spacing: 0.15em;
   font-family: "Freckle Face", cursive;
   font-variant: small-caps;
   color: #ff7d00;
@@ -155,6 +156,7 @@
 .navWrapper .navContent .navLeftCol {
   width: 30%;
   font-family: "Freckle Face", cursive;
+  letter-spacing: 0.25em;
 }
 
 .navWrapper .navContent .navLeftCol {

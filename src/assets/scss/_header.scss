@@ -20,7 +20,7 @@
         visibility: hidden;
         position: relative;
         top: 0;
-        width: 20%;
+        width: 70%;
         margin: 0 auto;
         background-color: rgba(21, 97, 109, 0.75);
         color: #fff;
@@ -58,6 +58,7 @@
     .headerTitle {
       margin-top: 3vw;
       h1 {
+        letter-spacing: 0.15em;
         font-family: $title-font;
         font-variant: small-caps;
         color: $link-highlight;

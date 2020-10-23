@@ -19,6 +19,7 @@
     .navLeftCol {
       width: 30%;
       font-family: $title-font;
+      letter-spacing: 0.25em;
       @include fluid-type(320px, 1200px, 18px, 40px);
     }
     .navRightCol {
