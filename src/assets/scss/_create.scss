@@ -33,7 +33,6 @@
             color: $secondary-colour;
             background-color: $tertiary-colour;
             border: none;
-            animation: rock 2s infinite ease-in-out;
           }
         }
 
@@ -76,18 +75,7 @@
         color: $secondary-colour;
         background-color: $tertiary-colour;
         border: none;
-        animation: rock 2s infinite ease-in-out;
       }
     }
-  }
-}
-
-@keyframes rock {
-  0%,
-  100% {
-    transform: rotate(-5deg) scale(1.15);
-  }
-  50% {
-    transform: rotate(5deg) scale(1.15);
   }
 }

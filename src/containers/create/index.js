@@ -9,13 +9,15 @@ class Create extends React.Component {
     constructor(props) {
     super(props);
         this.state = {
-            name: "none",
-            owner: "none",
-            core: "none",
-            texture: "none",
-            firstEssence: "none",
-            secondEssence: "none",
-            thirdEssence: "none"
+            name: "unassigned",
+            owner: "unassigned",
+            core: "unassigned",
+            texture: "unassigned",
+            firstEssence: 0,
+            secondEssence: 3,
+            thirdEssence: 6,
+            pattern: "",
+            temperment: "none"
         };
 
         this.onCoreChange = this.onCoreChange.bind(this);
@@ -24,6 +26,8 @@ class Create extends React.Component {
         this.onSecondEssenceChange = this.onSecondEssenceChange.bind(this);
         this.onThirdEssenceChange = this.onThirdEssenceChange.bind(this);
         this.submitPatch = this.submitPatch.bind(this);
+        this.largestTrait = this.largestTrait.bind(this);
+        this.tallyTemperment = this.tallyTemperment.bind(this);
   }
 
     onCoreChange(e) {
@@ -46,11 +50,62 @@ class Create extends React.Component {
         this.setState({ thirdEssence: e.target.value });
     }
 
-    submitPatch(e) {
-        let tally = [0, 0, 0, 0, 0, 0];
-        // [1] Sassy [2] Passionate [3] Comical [4] Despondent
-        // [5] Analytical [6] Gentle
+    submitPatch() {
+        this.tallyTemperment();
+    }
+
+    tallyTemperment() {
+        let tally = [0, 0, 0, 0, 0, 0, 0];
+        // [0] Sassy [1] Passionate [2] Comical [3] Despondent
+        // [4] Analytical [5] Idealistic [6] Gentle
         
+        tally[this.state.firstEssence]++;
+        tally[this.state.secondEssence]++;
+        tally[this.state.thirdEssence]++;
+        
+        let trait = this.largestTrait(tally);
+
+        switch (trait) {
+            case 0:
+                this.setState({ temperment: "sassy" });
+                break;
+            case 1:
+                this.setState({ temperment: "passionate" });
+                break;
+            case 2:
+                this.setState({ temperment: "comical" });
+                break;
+            case 3:
+                this.setState({ temperment: "despondent" });
+                break;
+            case 4:
+                this.setState({ temperment: "analytical" });
+                break;
+            case 5:
+                this.setState({ temperment: "idealistic" });
+                break;
+            case 6:
+                this.setState({ temperment: "gentle" });
+                break;
+        }
+    }
+
+    largestTrait(tally) {
+        if (tally.length === 0) {
+            return -1;
+        }
+
+        var max = tally[0];
+        var maxIndex = 0;
+
+        for (var i = 1; i < tally.length; i++) {
+            if (tally[i] > max) {
+                maxIndex = i;
+                max = tally[i];
+            }
+        }
+
+        return maxIndex;
     }
     
     render() {
@@ -120,6 +175,11 @@ class Create extends React.Component {
                 </select>
                 <br />
                 <button className="submitBtn" onClick={this.submitPatch}>View My Patch!</button>
+
+                <p><b>First Essence:</b> {this.state.firstEssence}</p>
+                <p><b>Second Essence:</b> {this.state.secondEssence}</p>
+                <p><b>Third Essence:</b> {this.state.thirdEssence}</p>
+                <p><b>Temperment:</b> {this.state.temperment}</p>
             </div>
       </div>
     );
