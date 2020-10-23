@@ -55,13 +55,15 @@ class Create extends React.Component {
 
                 <h2>Select a Core!</h2>
                 <div className="optionDiv">
-                {CoreList.map((core, idx) => {
+                    {CoreList.map((core, idx) => {
+                        var optionButtonClass = core.name == this.state.core ? "optionButton active" : "optionButton";
+                            
                     return (
-                        <div className="optionContainer">
-                            <div clasName="optionImageContainer">
+                        <div className="optionContainer" key={idx}>
+                            <div className="optionImageContainer">
                                 <img className="optionImageImage" style={{ width: 200, height: 200 }} src={core.image} />
                             </div>
-                            <button className="optionButton" onClick={this.onCoreChange} value={core.name} key={idx}>{core.name}</button>
+                            <button className={optionButtonClass} onClick={this.onCoreChange} value={core.name}>{core.name}</button>
                         </div>
                     )
                 })}
@@ -72,12 +74,14 @@ class Create extends React.Component {
                 <h2>Select a Texture!</h2>
                 <div className="optionDiv">
                     {TextureList.map((texture, idx) => {
+                        var optionButtonClass = texture.name == this.state.texture ? "optionButton active" : "optionButton";
+
                         return (
-                            <div className="optionContainer">
-                                <div clasName="optionImageContainer">
+                            <div className="optionContainer" key={idx}>
+                                <div className="optionImageContainer">
                                     <img className="optionImageImage" style={{ width: 100, height: 100 }} src={texture.image} />
                                 </div>
-                                <button className="optionButton" onClick={this.onTextureChange} value={texture.name} key={idx}>{texture.name}</button>
+                                <button className={optionButtonClass} onClick={this.onTextureChange} value={texture.name}>{texture.name}</button>
                             </div>
                     )
                 })}

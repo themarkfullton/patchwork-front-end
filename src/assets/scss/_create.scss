@@ -36,6 +36,12 @@
             animation: rock 2s infinite ease-in-out;
           }
         }
+
+        .active {
+          color: $secondary-colour;
+          background-color: $tertiary-colour;
+          border: none;
+        }
       }
     }
   }
@@ -44,9 +50,9 @@
 @keyframes rock {
   0%,
   100% {
-    transform: rotate(-10deg) scale(1.15);
+    transform: rotate(-5deg) scale(1.15);
   }
   50% {
-    transform: rotate(10deg) scale(1.15);
+    transform: rotate(5deg) scale(1.15);
   }
 }
