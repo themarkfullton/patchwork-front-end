@@ -1,0 +1,14 @@
+@import "variables", "header";
+
+body {
+  background-color: $background-colour;
+  width: 100vw;
+
+  .App {
+    width: 80%;
+    margin: 5vw auto;
+    background-color: $secondary-colour;
+    padding: 3%;
+    border-radius: 25px;
+  }
+}

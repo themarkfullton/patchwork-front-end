@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Amaranth&family=Freckle+Face&display=swap");
+body {
+  background-color: #001524;
+  width: 100vw;
+}
+
+body .App {
+  width: 80%;
+  margin: 5vw auto;
+  background-color: #15616d;
+  padding: 3%;
+  border-radius: 25px;
+}
+/*# sourceMappingURL=style.css.map */
