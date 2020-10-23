@@ -13,21 +13,26 @@
       }
     }
 
-    .coreDiv {
+    .optionDiv {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
 
-      .coreOption {
+      .optionContainer {
         width: 25%;
         margin: 1%;
-
-        .coreOptionImage {
-          width: 100%;
-
-          &:hover {
-            animation: rock 2s infinite ease-in-out;
+        .optionImageContainer {
+          width: 90%;
+          .optionImageImage {
+            width: 100%;
+            &:hover {
+              animation: rock 2s infinite ease-in-out;
+            }
           }
+        }
+        .optionButton {
+          width: 100%;
         }
       }
     }

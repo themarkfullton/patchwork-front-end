@@ -1,5 +1,6 @@
 import React from "react";
 import CoreList from "./cores.json";
+import TextureList from "./textures.json";
 import Doc from "./doc.png";
 
 class Create extends React.Component {
@@ -15,13 +16,17 @@ class Create extends React.Component {
             thirdEssence: "none"
         };
 
-        this.onCoreChange = this.onCoreChange.bind(this)
+        this.onCoreChange = this.onCoreChange.bind(this);
+        this.onTextureChange = this.onTextureChange.bind(this);
   }
 
     onCoreChange(e) {
         this.setState({ core: e.target.value });
     }
     
+    onTextureChange(e) {
+        this.setState({ texture: e.target.value });
+    }
     
     render() {
     return(
@@ -38,10 +43,28 @@ class Create extends React.Component {
                     <p><b>Name:</b> {this.state.name}</p>
                     <p><b>Creator:</b> {this.state.creator}</p>
                 <h2>Select a Core!</h2>
-                <div className="coreDiv">
+                <div className="optionDiv">
                 {CoreList.map((core, idx) => {
                     return (
-                        <button onClick={this.onCoreChange} value={core.name} key={idx}>{core.name}</button>
+                        <div className="optionContainer">
+                            <div clasName="optionImageContainer">
+                                <img className="optionImageImage" src={core.image} />
+                            </div>
+                            <button className="optionButton" onClick={this.onCoreChange} value={core.name} key={idx}>{core.name}</button>
+                        </div>
+                    )
+                })}
+                </div>
+                <h2>Select a Texture!</h2>
+                <div className="optionDiv">
+                    {TextureList.map((texture, idx) => {
+                        return (
+                            <div className="optionContainer">
+                                <div clasName="optionImageContainer">
+                                    <img src={texture.image} />
+                                </div>
+                                <button onClick={this.onTextureChange} value={texture.name} key={idx}>{texture.name}</button>
+                            </div>
                     )
                 })}
                 </div>

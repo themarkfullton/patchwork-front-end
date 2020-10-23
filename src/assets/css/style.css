@@ -222,10 +222,12 @@
   height: 100%;
 }
 
-.createWrapper .createContent .coreDiv {
+.createWrapper .createContent .optionDiv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -234,18 +236,26 @@
           align-items: center;
 }
 
-.createWrapper .createContent .coreDiv .coreOption {
+.createWrapper .createContent .optionDiv .optionContainer {
   width: 25%;
   margin: 1%;
 }
 
-.createWrapper .createContent .coreDiv .coreOption .coreOptionImage {
+.createWrapper .createContent .optionDiv .optionContainer .optionImageContainer {
+  width: 90%;
+}
+
+.createWrapper .createContent .optionDiv .optionContainer .optionImageContainer .optionImageImage {
   width: 100%;
 }
 
-.createWrapper .createContent .coreDiv .coreOption .coreOptionImage:hover {
+.createWrapper .createContent .optionDiv .optionContainer .optionImageContainer .optionImageImage:hover {
   -webkit-animation: rock 2s infinite ease-in-out;
           animation: rock 2s infinite ease-in-out;
+}
+
+.createWrapper .createContent .optionDiv .optionContainer .optionButton {
+  width: 100%;
 }
 
 @keyframes rock {
