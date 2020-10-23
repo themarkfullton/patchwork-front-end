@@ -3,8 +3,7 @@ import CoreList from "./cores.json";
 import TextureList from "./textures.json";
 import FirstEssence from "./firstEssence.json";
 import SecondEssence from "./secondEssence.json";
-import ThirdEssence from "./thirdEssence.json"; 
-import Doc from "./doc.png";
+import ThirdEssence from "./thirdEssence.json";
 
 class Create extends React.Component {
     constructor(props) {
@@ -48,6 +47,9 @@ class Create extends React.Component {
     }
 
     submitPatch(e) {
+        let tally = [0, 0, 0, 0, 0, 0];
+        // [1] Sassy [2] Passionate [3] Comical [4] Despondent
+        // [5] Analytical [6] Gentle
         
     }
     

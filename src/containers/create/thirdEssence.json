@@ -1,30 +1,30 @@
 [
     {
         "name":"Ocean Whisper",
-        "val":"gentle"
+        "val":6
     },
     {
         "name":"Vibrant Soul",
-        "val":"passionate"
+        "val":1
     },
     {
         "name":"Brain Matter",
-        "val":"analytical"
+        "val":4
     },
     {
         "name":"Twinkling Dust",
-        "val":"comical"
+        "val":2
     },
     {
         "name":"Neverending Horizon",
-        "val":"idealistic"
+        "val":5
     },
     {
         "name":"Sharp Tongue",
-        "val":"sassy"
+        "val":0
     },
     {
         "name":"Rain Cloud",
-        "val":"despondent"
+        "val":3
     }
 ]

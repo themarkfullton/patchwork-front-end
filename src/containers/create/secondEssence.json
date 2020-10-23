@@ -1,30 +1,30 @@
 [
     {
         "name":"Darkest Night",
-        "val":"despondent"
+        "val":3
     },
     {
         "name":"Essence of Arithmetic",
-        "val":"analytical"
+        "val":4
     },
     {
         "name":"Echo of Hope",
-        "val":"idealistic"
+        "val":5
     },
     {
         "name":"Inner Fire",
-        "val":"passionate"
+        "val":1
     },
     {
         "name":"Bottled Indignation",
-        "val":"sassy"
+        "val":0
     },
     {
         "name":"Memory of Sunset",
-        "val":"gentle"
+        "val":6
     },
     {
         "name":"Ill-Timed Noise",
-        "val":"comical"
+        "val":2
     }
 ]
