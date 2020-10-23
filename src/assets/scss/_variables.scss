@@ -3,11 +3,9 @@
 $title-font: "Freckle Face", cursive;
 $body-font: "Amaranth", sans-serif;
 $background-colour: #001524;
-$link-colour: #ff7d00;
-$link-highlight: #78290f;
+$link-colour: #001524;
+$link-highlight: #ff7d00;
 $secondary-colour: #15616d;
-$tertiary-colour: #bee3db;
-$quat-colour: #faf9f9;
 
 @mixin transition-time() {
   transition: all 0.5s;

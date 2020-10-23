@@ -1,0 +1,31 @@
+.navWrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $secondary-colour;
+
+  .navContent {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2.5vw 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    .navLeftCol {
+      width: 30%;
+      font-family: $title-font;
+      @include fluid-type(320px, 1200px, 15px, 40px);
+    }
+    .navRightCol {
+      font-family: $title-font;
+      justify-content: space-between;
+      @include fluid-type(320px, 1200px, 15px, 40px);
+
+      .navItem {
+        margin-left: 3vw;
+      }
+    }
+  }
+}

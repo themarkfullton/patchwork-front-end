@@ -1,0 +1,43 @@
+.headerWrapper {
+  margin-top: 15vw;
+  width: 100%;
+
+  .headerContent {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+
+    .headerImage {
+      width: 100%;
+      height: 25vw;
+      overflow: hidden;
+      @include transition-time;
+
+      .headerImageImage {
+        height: 100%;
+
+        &:hover {
+          cursor: pointer;
+          animation: rock 2s infinite ease-in-out;
+        }
+      }
+    }
+
+    h1 {
+      font-family: $title-font;
+      font-variant: small-caps;
+      color: $link-highlight;
+      @include fluid-type(320px, 1200px, 50px, 90px);
+    }
+  }
+}
+
+@keyframes rock {
+  0%,
+  100% {
+    transform: rotate(-10deg) scale(1.25);
+  }
+  50% {
+    transform: rotate(10deg) scale(1.25);
+  }
+}

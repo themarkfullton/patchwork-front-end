@@ -1,14 +1,171 @@
 @import url("https://fonts.googleapis.com/css2?family=Amaranth&family=Freckle+Face&display=swap");
+.headerWrapper {
+  margin-top: 15vw;
+  width: 100%;
+}
+
+.headerWrapper .headerContent {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.headerWrapper .headerContent .headerImage {
+  width: 100%;
+  height: 25vw;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.headerWrapper .headerContent .headerImage .headerImageImage {
+  height: 100%;
+}
+
+.headerWrapper .headerContent .headerImage .headerImageImage:hover {
+  cursor: pointer;
+  -webkit-animation: rock 2s infinite ease-in-out;
+          animation: rock 2s infinite ease-in-out;
+}
+
+.headerWrapper .headerContent h1 {
+  font-family: "Freckle Face", cursive;
+  font-variant: small-caps;
+  color: #ff7d00;
+}
+
+.headerWrapper .headerContent h1 {
+  font-size: 50px;
+}
+
+@media screen and (min-width: 320px) {
+  .headerWrapper .headerContent h1 {
+    font-size: calc( 50px + 40 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .headerWrapper .headerContent h1 {
+    font-size: 90px;
+  }
+}
+
+@-webkit-keyframes rock {
+  0%,
+  100% {
+    -webkit-transform: rotate(-10deg) scale(1.25);
+            transform: rotate(-10deg) scale(1.25);
+  }
+  50% {
+    -webkit-transform: rotate(10deg) scale(1.25);
+            transform: rotate(10deg) scale(1.25);
+  }
+}
+
+@keyframes rock {
+  0%,
+  100% {
+    -webkit-transform: rotate(-10deg) scale(1.25);
+            transform: rotate(-10deg) scale(1.25);
+  }
+  50% {
+    -webkit-transform: rotate(10deg) scale(1.25);
+            transform: rotate(10deg) scale(1.25);
+  }
+}
+
+.navWrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #15616d;
+}
+
+.navWrapper .navContent {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2.5vw 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.navWrapper .navContent .navLeftCol {
+  width: 30%;
+  font-family: "Freckle Face", cursive;
+}
+
+.navWrapper .navContent .navLeftCol {
+  font-size: 15px;
+}
+
+@media screen and (min-width: 320px) {
+  .navWrapper .navContent .navLeftCol {
+    font-size: calc( 15px + 25 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navWrapper .navContent .navLeftCol {
+    font-size: 40px;
+  }
+}
+
+.navWrapper .navContent .navRightCol {
+  font-family: "Freckle Face", cursive;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navWrapper .navContent .navRightCol {
+  font-size: 15px;
+}
+
+@media screen and (min-width: 320px) {
+  .navWrapper .navContent .navRightCol {
+    font-size: calc( 15px + 25 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navWrapper .navContent .navRightCol {
+    font-size: 40px;
+  }
+}
+
+.navWrapper .navContent .navRightCol .navItem {
+  margin-left: 3vw;
+}
+
 body {
   background-color: #001524;
   width: 100vw;
 }
 
-body .App {
+body .content {
   width: 80%;
-  margin: 5vw auto;
+  margin: 7vw auto;
   background-color: #15616d;
   padding: 3%;
   border-radius: 25px;
+}
+
+body a {
+  text-decoration: none;
+  color: #001524;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body a:hover {
+  color: #ff7d00;
 }
 /*# sourceMappingURL=style.css.map */

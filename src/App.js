@@ -27,7 +27,6 @@ function App() {
           <Route exact path="/" component={Splash} />
           <Route exact path="/create" component={Create} />
           <Route exact path="/view" component={View} />
-          <Route component={NotFound} />
         </div>
       </Router>
     </div>

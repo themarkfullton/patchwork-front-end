@@ -1,14 +1,24 @@
-@import "variables", "header";
+@import "variables", "header", "navbar";
 
 body {
   background-color: $background-colour;
   width: 100vw;
 
-  .App {
+  .content {
     width: 80%;
-    margin: 5vw auto;
+    margin: 7vw auto;
     background-color: $secondary-colour;
     padding: 3%;
     border-radius: 25px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $link-colour;
+    @include transition-time;
+
+    &:hover {
+      color: $link-highlight;
+    }
   }
 }
