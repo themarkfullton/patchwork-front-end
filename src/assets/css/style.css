@@ -223,30 +223,38 @@
 }
 
 .createWrapper .createContent .optionDiv {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .createWrapper .createContent .optionDiv .optionContainer {
-  width: 25%;
-  margin: 1%;
+  width: 30%;
+  background-color: red;
 }
 
 .createWrapper .createContent .optionDiv .optionContainer .optionImageContainer {
-  width: 90%;
+  width: 30%;
+  overflow: hidden;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
 .createWrapper .createContent .optionDiv .optionContainer .optionImageContainer .optionImageImage {
-  width: 100%;
+  width: 30px;
 }
 
 .createWrapper .createContent .optionDiv .optionContainer .optionImageContainer .optionImageImage:hover {

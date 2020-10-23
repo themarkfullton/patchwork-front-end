@@ -61,9 +61,9 @@ class Create extends React.Component {
                         return (
                             <div className="optionContainer">
                                 <div clasName="optionImageContainer">
-                                    <img src={texture.image} />
+                                    <img className="optionImageImage" src={texture.image} />
                                 </div>
-                                <button onClick={this.onTextureChange} value={texture.name} key={idx}>{texture.name}</button>
+                                <button className="optionButton" onClick={this.onTextureChange} value={texture.name} key={idx}>{texture.name}</button>
                             </div>
                     )
                 })}

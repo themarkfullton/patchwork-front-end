@@ -14,18 +14,25 @@
     }
 
     .optionDiv {
+      width: 100%;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      flex-flow: row wrap;
       align-items: center;
+      flex-shrink: 1;
+      justify-content: space-between;
 
       .optionContainer {
-        width: 25%;
-        margin: 1%;
+        width: 30%;
+        background-color: red;
+
         .optionImageContainer {
-          width: 90%;
+          width: 30%;
+          overflow: hidden;
+          flex-shrink: 1;
+
           .optionImageImage {
-            width: 100%;
+            width: 30px;
+
             &:hover {
               animation: rock 2s infinite ease-in-out;
             }
