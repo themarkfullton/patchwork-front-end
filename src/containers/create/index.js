@@ -12,9 +12,8 @@ class Create extends React.Component {
             firstEssence: 0,
             secondEssence: 3,
             thirdEssence: 6,
-            pattern: "",
+            pattern: "nobody",
             temperment: "none",
-            patchImage: "unassigned",
             submitPatch: false
         };
 
@@ -23,7 +22,8 @@ class Create extends React.Component {
         this.onFirstEssenceChange = this.onFirstEssenceChange.bind(this);
         this.onSecondEssenceChange = this.onSecondEssenceChange.bind(this);
         this.onThirdEssenceChange = this.onThirdEssenceChange.bind(this);
-        this.submitPatch = this.submitPatch.bind(this);
+        this.onSubmitPatch = this.onSubmitPatch.bind(this);
+        this.onRecyclePatch = this.onRecyclePatch.bind(this);
         this.largestTrait = this.largestTrait.bind(this);
         this.tallyTemperment = this.tallyTemperment.bind(this);
   }
@@ -48,11 +48,17 @@ class Create extends React.Component {
         this.setState({ thirdEssence: e.target.value });
     }
 
-    submitPatch() {
+    onSubmitPatch() {
         this.tallyTemperment();
         this.createPatchImage();
         this.setState({
             submitPatch: true
+        })
+    }
+
+    onRecyclePatch() {
+        this.setState({
+            submitPatch: false
         })
     }
 
@@ -111,54 +117,46 @@ class Create extends React.Component {
     }
 
     createPatchImage() {
-        let ranNum = Math.floor(Math.random() * 1);
-
         switch (this.state.core) {
             case "Chaos":
-                if (ranNum == 0) {
+                if (this.state.firstEssence % 2 == 0) {
                     this.setState({
-                        pattern: "smiley"
+                        pattern: "Smiley"
                     })
                 }
                 else {
                     this.setState({
-                        pattern: "mrbiggs"
+                        pattern: "Mrbiggs"
                     })
                 }
                 break;
             case "Time":
-                if (ranNum == 0) {
+                if (this.state.firstEssence % 2  == 0) {
                     this.setState({
-                        pattern: "nobody"
+                        pattern: "Nobody"
                     })
                 }
                 else {
                     this.setState({
-                        pattern: "tranquil"
+                        pattern: "Tranquil"
                     })
                 }
                 break;
             case "Wind":
-                if (ranNum == 0) {
+                if (this.state.firstEssence % 2  == 0) {
                     this.setState({
-                        pattern: "grumpypuff"
+                        pattern: "Grumpypuff"
                     })
                 }
                 else {
                     this.setState({
-                        pattern: "slumpy"
+                        pattern: "Slumpy"
                     })
                 }
                 break;
         }
-
-        let patchSrc = `/images/patches/${this.state.pattern}_${this.state.texture}.png`;
-
-        this.setState({
-            patchImage: patchSrc
-        });
     }
-    
+
     render() {
     return(
         <div className="createWrapper">
@@ -178,8 +176,8 @@ class Create extends React.Component {
                 onFirstEssenceChange={this.onFirstEssenceChange}
                 onSecondEssenceChange={this.onSecondEssenceChange}
                 onThirdEssenceChange={this.onThirdEssenceChange}
-                patchImage={this.state.patchImage}
-                submitPatch={this.state.submitPatch}
+                onSubmitPatch={this.onSubmitPatch}
+                onRecyclePatch={this.onRecyclePatch}
             />
       </div>
     );
