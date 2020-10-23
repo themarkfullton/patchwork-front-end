@@ -7,15 +7,15 @@ class Navbar extends React.Component {
             <div className="navWrapper">
                 <div className="navContent">
                     <div className="navLeftCol">
-                        <NavLink to="" className="navLogo">
+                        <NavLink to="/" className="navLogo">
                         Patchwork
                         </NavLink>
                     </div>
                     <div className="navRightCol">
-                        <NavLink to="" className="navItem">
+                        <NavLink to="/create" className="navItem">
                         Create a Patch
                         </NavLink>
-                        <NavLink to="" className="navItem">
+                        <NavLink to="/view" className="navItem">
                         See All Patches
                         </NavLink>
                     </div>

@@ -4,6 +4,11 @@ body {
   background-color: $background-colour;
   width: 100vw;
 
+  p {
+    font-family: $body-font;
+    @include fluid-type(320px, 1200px, 20px, 25px);
+  }
+
   .content {
     width: 80%;
     margin: 7vw auto;

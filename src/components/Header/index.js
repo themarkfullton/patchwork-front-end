@@ -59,6 +59,7 @@ class Header extends React.Component {
             <div className="headerWrapper">
                 <div className="headerContent">
                     <div className="headerImage">
+                        <p className="imageSpeech">Click me!</p>
                         <img src={this.state.currentHeader} className="headerImageImage" onClick={this.changeHeader} />
                     </div>
                     <div className="headerTitle">
