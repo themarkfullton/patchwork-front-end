@@ -1,0 +1,45 @@
+.createWrapper {
+  .createContent {
+    width: 100%;
+
+    .createDocPicHolder {
+      margin: 0 auto;
+      height: 30vw;
+      overflow: hidden;
+      text-align: center;
+
+      .createDocPic {
+        height: 100%;
+      }
+    }
+
+    .coreDiv {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .coreOption {
+        width: 25%;
+        margin: 1%;
+
+        .coreOptionImage {
+          width: 100%;
+
+          &:hover {
+            animation: rock 2s infinite ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rock {
+  0%,
+  100% {
+    transform: rotate(-10deg) scale(1.15);
+  }
+  50% {
+    transform: rotate(10deg) scale(1.15);
+  }
+}

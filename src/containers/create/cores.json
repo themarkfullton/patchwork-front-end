@@ -1,0 +1,14 @@
+[
+    {
+        "name":"Chaos",
+        "image":"/images/cores/core_chaos.png"
+    },
+    {
+        "name":"Time",
+        "image":"/images/cores/core_time.png"
+    },
+    {
+        "name":"Wind",
+        "image":"/images/cores/core_wind.png"
+    }
+]

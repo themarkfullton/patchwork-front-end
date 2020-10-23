@@ -1,0 +1,22 @@
+[
+    {
+        "name":"Argyle",
+        "image":"/images/textures/texture_argyle.png"
+    },
+    {
+        "name":"Checkered",
+        "image":"/images/textures/texture_checkered.png"
+    },
+    {
+        "name":"Denim",
+        "image":"/images/textures/texture_denim.png"
+    },
+    {
+        "name":"Plaid",
+        "image":"/images/textures/texture_plaid.png"
+    },
+    {
+        "name":"Polkadot",
+        "image":"/images/textures/texture_polkadot.png"
+    }
+]

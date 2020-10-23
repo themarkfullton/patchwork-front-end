@@ -1,4 +1,4 @@
-@import "variables", "header", "navbar";
+@import "variables", "header", "navbar", "create";
 
 body {
   background-color: $background-colour;
@@ -34,6 +34,13 @@ body {
     &:hover {
       color: $link-colour;
     }
+  }
+
+  h1 {
+    letter-spacing: 0.15em;
+    font-family: $title-font;
+    color: $link-highlight;
+    @include fluid-type(320px, 1200px, 30px, 50px);
   }
 
   h2 {

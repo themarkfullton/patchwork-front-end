@@ -11,7 +11,6 @@ import Splash from "./containers/Splash";
 import Create from "./containers/Create";
 import Update from "./containers/Update";
 import View from "./containers/View";
-import NotFound from "./containers/NotFound";
 
 //==========| Styles \===================>
 import "./assets/css/reset.css";
