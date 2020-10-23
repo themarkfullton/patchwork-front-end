@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Amaranth&family=Freckle+Face&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@300&family=Freckle+Face&display=swap");
 
 $title-font: "Freckle Face", cursive;
-$body-font: "Amaranth", sans-serif;
+$body-font: "Grandstander", cursive;
 $background-colour: #001524;
 $link-colour: #001524;
 $link-highlight: #ff7d00;
 $secondary-colour: #15616d;
+$tertiary-colour: #2ec4b6;
 
 @mixin transition-time() {
   transition: all 0.5s;

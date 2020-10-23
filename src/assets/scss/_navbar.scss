@@ -4,6 +4,7 @@
   top: 0;
   left: 0;
   background-color: $secondary-colour;
+  border-bottom: 5px dashed $background-colour;
   z-index: 9;
 
   .navContent {
@@ -13,11 +14,12 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
+    font-variant: small-caps;
 
     .navLeftCol {
       width: 30%;
       font-family: $title-font;
-      @include fluid-type(320px, 1200px, 15px, 40px);
+      @include fluid-type(320px, 1200px, 18px, 40px);
     }
     .navRightCol {
       font-family: $title-font;
@@ -26,6 +28,11 @@
 
       .navItem {
         margin-left: 3vw;
+        color: $link-colour;
+
+        &:hover {
+          color: $link-highlight;
+        }
       }
     }
   }

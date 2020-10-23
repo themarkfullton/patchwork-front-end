@@ -29,7 +29,7 @@
         padding: 1vw 0.5vw;
         z-index: 3;
         font-family: $body-font;
-        @include fluid-type(320px, 1200px, 18px, 25px);
+        @include fluid-type(320px, 1200px, 12px, 25px);
         animation: rock 2s infinite ease-in-out;
 
         &::after {

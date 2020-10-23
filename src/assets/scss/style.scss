@@ -6,6 +6,8 @@ body {
 
   p {
     font-family: $body-font;
+    line-height: 1.8em;
+    margin-bottom: 0.5em;
     @include fluid-type(320px, 1200px, 20px, 25px);
   }
 
@@ -13,17 +15,36 @@ body {
     width: 80%;
     margin: 7vw auto;
     background-color: $secondary-colour;
-    padding: 3%;
+    padding: 5%;
     border-radius: 25px;
+    border: 5px dashed $background-colour;
+  }
+
+  hr {
+    border: none;
+    border-top: 5px dashed $background-colour;
   }
 
   a {
     text-decoration: none;
-    color: $link-colour;
+    font-weight: bolder;
+    color: $link-highlight;
     @include transition-time;
 
     &:hover {
-      color: $link-highlight;
+      color: $link-colour;
     }
+  }
+
+  h2 {
+    font-family: $title-font;
+    line-height: 2em;
+    color: $tertiary-colour;
+    @include fluid-type(320px, 1200px, 25px, 30px);
+  }
+
+  b {
+    font-weight: bolder;
+    color: $background-colour;
   }
 }

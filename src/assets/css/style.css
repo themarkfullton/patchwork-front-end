@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Amaranth&family=Freckle+Face&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@300&family=Freckle+Face&display=swap");
 .headerWrapper {
   margin-top: 10vw;
   width: 100%;
@@ -34,18 +34,18 @@
   border-radius: 6px;
   padding: 1vw 0.5vw;
   z-index: 3;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Grandstander", cursive;
   -webkit-animation: rock 2s infinite ease-in-out;
           animation: rock 2s infinite ease-in-out;
 }
 
 .headerWrapper .headerContent .headerImage .imageSpeech {
-  font-size: 18px;
+  font-size: 12px;
 }
 
 @media screen and (min-width: 320px) {
   .headerWrapper .headerContent .headerImage .imageSpeech {
-    font-size: calc( 18px + 7 * ((100vw - 320px) / 880));
+    font-size: calc( 12px + 13 * ((100vw - 320px) / 880));
   }
 }
 
@@ -132,6 +132,7 @@
   top: 0;
   left: 0;
   background-color: #15616d;
+  border-bottom: 5px dashed #001524;
   z-index: 9;
 }
 
@@ -148,6 +149,7 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
+  font-variant: small-caps;
 }
 
 .navWrapper .navContent .navLeftCol {
@@ -156,12 +158,12 @@
 }
 
 .navWrapper .navContent .navLeftCol {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 @media screen and (min-width: 320px) {
   .navWrapper .navContent .navLeftCol {
-    font-size: calc( 15px + 25 * ((100vw - 320px) / 880));
+    font-size: calc( 18px + 22 * ((100vw - 320px) / 880));
   }
 }
 
@@ -196,6 +198,11 @@
 
 .navWrapper .navContent .navRightCol .navItem {
   margin-left: 3vw;
+  color: #001524;
+}
+
+.navWrapper .navContent .navRightCol .navItem:hover {
+  color: #ff7d00;
 }
 
 body {
@@ -204,7 +211,9 @@ body {
 }
 
 body p {
-  font-family: "Amaranth", sans-serif;
+  font-family: "Grandstander", cursive;
+  line-height: 1.8em;
+  margin-bottom: 0.5em;
 }
 
 body p {
@@ -227,18 +236,52 @@ body .content {
   width: 80%;
   margin: 7vw auto;
   background-color: #15616d;
-  padding: 3%;
+  padding: 5%;
   border-radius: 25px;
+  border: 5px dashed #001524;
+}
+
+body hr {
+  border: none;
+  border-top: 5px dashed #001524;
 }
 
 body a {
   text-decoration: none;
-  color: #001524;
+  font-weight: bolder;
+  color: #ff7d00;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 body a:hover {
-  color: #ff7d00;
+  color: #001524;
+}
+
+body h2 {
+  font-family: "Freckle Face", cursive;
+  line-height: 2em;
+  color: #2ec4b6;
+}
+
+body h2 {
+  font-size: 25px;
+}
+
+@media screen and (min-width: 320px) {
+  body h2 {
+    font-size: calc( 25px + 5 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body h2 {
+    font-size: 30px;
+  }
+}
+
+body b {
+  font-weight: bolder;
+  color: #001524;
 }
 /*# sourceMappingURL=style.css.map */
