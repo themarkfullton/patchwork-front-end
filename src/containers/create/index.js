@@ -34,7 +34,11 @@ class Create extends React.Component {
         this.onNameChange = this.onNameChange.bind(this);
         this.onCreatorChange = this.onCreatorChange.bind(this);
         this.createPatchGreeting = this.createPatchGreeting.bind(this);
-  }
+    }
+    
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
 
     onCoreChange(e) {
         this.setState({ core: e.target.value });
@@ -71,12 +75,14 @@ class Create extends React.Component {
         this.setState({
             submitPatch: true
         })
+        window.scrollTo(0, 0)
     }
 
     onRecyclePatch() {
         this.setState({
             submitPatch: false
         })
+        window.scrollTo(0, 0)
     }
 
     tallyTemperment() {
@@ -175,46 +181,63 @@ class Create extends React.Component {
     }
 
     createPatchGreeting() {
-        var ranNum = Math.floor(Math.random() * 4);
-    var greetingList;
-    var patchGreeting;
-    switch (ranNum) {
-        case 0:
-            greetingList = Greeting0;
-            break;
-        case 1:
-            greetingList = Greeting1;
-            break;
-        case 2:
-            greetingList = Greeting2;
-            break;
-        case 3:
-            greetingList = Greeting3;
-            break
-    }
-    switch (props.temperment) {
-        case "Sassy":
-            patchGreeting = greetingList[0];
-            break;
-        case "Passionate":
-            patchGreeting = greetingList[1];
-            break;
-        case "Comical":
-            patchGreeting = greetingList[2];
-            break;
-        case "Despondent":
-            patchGreeting = greetingList[3];
-            break;
-        case "Analytical":
-            patchGreeting = greetingList[4];
-            break;
-        case "Idealistic":
-            patchGreeting = greetingList[5];
-            break;
-        case "Gentle":
-            patchGreeting = greetingList[6];
-            break;
-    }
+        // var ranNum = Math.floor(Math.random() * 4);
+        // var greetingList = Greeting0;
+        
+    // switch (ranNum) {
+    //     case 0:
+    //         greetingList = Greeting0;
+    //         break;
+    //     case 1:
+    //         greetingList = Greeting1;
+    //         break;
+    //     case 2:
+    //         greetingList = Greeting2;
+    //         break;
+    //     case 3:
+    //         greetingList = Greeting3;
+    //         break
+    // }
+        this.setState({
+            greeting: "Does this even add?"
+        });
+    // switch (this.state.temperment) {
+    //     case "Sassy":
+    //         this.setState({
+    //             greeting: Greeting0[0].greeting
+    //         })
+    //         break;
+    //     case "Passionate":
+    //         this.setState({
+    //             greeting: Greeting0[1].greeting
+    //         })
+    //         break;
+    //     case "Comical":
+    //         this.setState({
+    //             greeting: Greeting0[2].greeting
+    //         })
+    //         break;
+    //     case "Despondent":
+    //         this.setState({
+    //             greeting: Greeting0[3].greeting
+    //         })
+    //         break;
+    //     case "Analytical":
+    //         this.setState({
+    //             greeting: Greeting0[4].greeting
+    //         })
+    //         break;
+    //     case "Idealistic":
+    //         this.setState({
+    //             greeting: Greeting0[5].greeting
+    //         })
+    //         break;
+    //     case "Gentle":
+    //         this.setState({
+    //             greeting: Greeting0[6].greeting
+    //         })
+    //         break;
+    //     }
     }
 
     render() {

@@ -17,7 +17,7 @@ const Workshop = (props) => {
             <p>{props.patchImage}</p>
             <div className="workshopPatchContainer">
                 <div className="wsPatchImageCont">
-                    <p className="imageSpeech">Give me a name!</p>
+                    <p className="imageSpeech">{props.greeting}</p>
                     <img className="wsPatchImageImage" src={patchSrc} />
                 </div>
                 <div className="wsTitle">

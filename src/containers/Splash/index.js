@@ -2,6 +2,10 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 class Splash extends React.Component {
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+    
     render() {
         return (
             <div className="splashWrapper">
