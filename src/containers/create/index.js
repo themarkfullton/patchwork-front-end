@@ -1,12 +1,14 @@
 import React from "react";
+import API from "../../utils/API";
+import { Redirect } from "react-router-dom";
 import Workshop from "../../components/Workshop";
 
 class Create extends React.Component {
     constructor(props) {
     super(props);
         this.state = {
-            name: "???",
-            owner: "Anonymous",
+            name: "?",
+            owner: "?",
             core: "Chaos",
             texture: "Argyle",
             firstEssence: 0,
@@ -28,6 +30,7 @@ class Create extends React.Component {
         this.tallyTemperment = this.tallyTemperment.bind(this);
         this.onNameChange = this.onNameChange.bind(this);
         this.onCreatorChange = this.onCreatorChange.bind(this);
+        this.onPostPatch = this.onPostPatch.bind(this);
     }
     
     componentDidMount() {
@@ -173,6 +176,22 @@ class Create extends React.Component {
         }
     }
 
+    onPostPatch() {
+        if (this.state.name != "?" && this.state.creator != "?") {
+            API.createPatch(this.state.creator, this.state.name, this.state.pattern, this.state.texture, this.state.temperment).then((resp) => {
+                alert("Created patch!");
+                return <Redirect to='/view' />
+            }).catch((err) => {
+                alert(err);
+            });
+        } else if (this.state.name == "?") {
+            alert("Please name your Patch before submitting");
+        } else {
+            alert("Please enter a fake name before submitting");
+        }
+        
+    }
+
     render() {
     return(
         <div className="createWrapper">
@@ -196,6 +215,7 @@ class Create extends React.Component {
                 onRecyclePatch={this.onRecyclePatch}
                 onNameChange={this.onNameChange}
                 onCreatorChange={this.onCreatorChange}
+                onPostPatch={this.onPostPatch}
             />
       </div>
     );

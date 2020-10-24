@@ -4,7 +4,7 @@ import TextureList from "./textures.json";
 import FirstEssence from "./firstEssence.json";
 import SecondEssence from "./secondEssence.json";
 import ThirdEssence from "./thirdEssence.json";
-
+import { NavLink } from "react-router-dom";
 
 const Workshop = (props) => {
     var patchSrc = `/images/patches/${props.pattern}_${props.texture}.png`;
@@ -35,7 +35,7 @@ const Workshop = (props) => {
 
                 <div className="formGroup">
                 <button className="submitBtn small" onClick={props.onRecyclePatch}>Recycle</button>
-                    <button className="submitBtn small" onClick={props.onRecyclePatch}>Create</button>
+                    <NavLink className="submitBtn small" to="/view" onClick={props.onPostPatch}>Create</NavLink>
                     </div>
             </div>
         </div>

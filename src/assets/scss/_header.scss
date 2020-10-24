@@ -1,5 +1,5 @@
 .headerWrapper {
-  margin-top: 10vw;
+  margin-top: 6vw;
   width: 100%;
 
   .headerContent {
@@ -10,7 +10,7 @@
     .headerImage {
       position: relative;
       width: 100%;
-      height: 25vw;
+      height: 20vw;
       @include transition-time;
 
       &:hover .imageSpeech {
@@ -26,7 +26,7 @@
         color: #fff;
         text-align: center;
         border-radius: 6px;
-        padding: 1vw 0.5vw;
+        padding: 0.5vw;
         z-index: 3;
         font-family: $body-font;
         @include fluid-type(320px, 1200px, 12px, 25px);
