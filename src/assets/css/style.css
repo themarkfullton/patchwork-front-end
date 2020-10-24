@@ -33,7 +33,7 @@
   text-align: center;
   border-radius: 6px;
   padding: 0.5vw;
-  z-index: 3;
+  z-index: 12;
   font-family: "Grandstander", cursive;
   -webkit-animation: rock 2s infinite ease-in-out;
           animation: rock 2s infinite ease-in-out;
@@ -450,6 +450,119 @@
 
 .createWrapper .createContent .small {
   width: 40%;
+}
+
+.bestiaryWrapper {
+  width: 100%;
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 45%;
+          flex: 1 1 45%;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  text-align: center;
+  margin: 1vw 0.5vw 2vw 0.5vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer {
+    font-size: calc( 16px + 4 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer {
+    font-size: 20px;
+  }
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchNameCont {
+  font-family: "Freckle Face", cursive;
+  color: #001524;
+  padding: 1vw;
+  line-height: 1.5em;
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchNameCont {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 320px) {
+  .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchNameCont {
+    font-size: calc( 18px + 12 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchNameCont {
+    font-size: 30px;
+  }
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchNameCont h3 {
+  padding-bottom: 1vw;
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchNameCont h4 {
+  opacity: 0.75;
+  border-top: 3px dashed #001524;
+  padding-top: 1vw;
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchNameCont h4 {
+  font-size: 13px;
+}
+
+@media screen and (min-width: 320px) {
+  .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchNameCont h4 {
+    font-size: calc( 13px + 14 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchNameCont h4 {
+    font-size: 27px;
+  }
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchImageContainer {
+  margin: 3vh auto 0;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  line-height: normal;
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchImageContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body {

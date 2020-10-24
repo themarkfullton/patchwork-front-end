@@ -2,7 +2,7 @@ import React from "react";
 
 const Bestiary = (props) => {
     return props.patches.length === 0 ? (
-        <div className="bestiaryWrap">
+        <div className="bestiaryWrapper">
             <div className="bestiaryContainer">
                 <h1>Bestiary</h1>
                 <h2>All Patches Created so far!</h2>
@@ -12,7 +12,7 @@ const Bestiary = (props) => {
             </div>
         </div>
     ) : (
-            <div className="bestiaryWrap">
+            <div className="bestiaryWrapper">
                 <div className="bestiaryContainer">
                     <h1>Bestiary</h1>
                     <h2>All Patches Created so far!</h2>
@@ -26,8 +26,8 @@ const Bestiary = (props) => {
                                         <img className="patchImageImage" src={patchSrc} />
                                     </div>
                                     <div className="patchNameCont">
-                                        <h3>{patch.name} the {patch.temperment}  {patch.texture} {patch.pattern}</h3>
-                                        <h4>Creator: {patch.creator}</h4>
+                                        <h3><span class={patch.texture}>{patch.name}</span> the {patch.temperment}  <span class={patch.texture}>{patch.texture}</span> {patch.pattern}</h3>
+                                        <h4>Creator: <span class={patch.texture}>{patch.creator}</span></h4>
                                     </div>
                                 </div>
                             )
