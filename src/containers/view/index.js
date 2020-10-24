@@ -8,17 +8,17 @@ class View extends React.Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0, 0);
         API.getPatches().then((res) => {
             this.setState({ patches: res.data });
         }).catch((err) => this.setState({ error: err.items }));
+        window.scrollTo(0, 0);
     }
     
     render() {
         return (
             <div className="viewWrapper">
                 <div className="viewContent">
-                    <Bestiary resources={this.state.patches} />
+                    <Bestiary patches={this.state.patches} />
                 </div>
             </div>
         )
