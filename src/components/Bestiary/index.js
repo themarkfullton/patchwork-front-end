@@ -37,3 +37,5 @@ const Bestiary = (props) => {
             </div>
         );
 }
+
+export default Bestiary;
