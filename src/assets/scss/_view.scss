@@ -22,17 +22,20 @@
         .patchNameCont {
           font-family: $title-font;
           color: $link-colour;
+          border: 3px dashed $link-colour;
           padding: 1vw;
           line-height: 1.5em;
+          background-color: rgba(255, 255, 255, 0.2);
           @include fluid-type(320px, 1200px, 18px, 30px);
+        }
 
-          h3 {
-            padding-bottom: 1vw;
-          }
+        .patchCreatorCont {
           h4 {
+            font-family: $title-font;
+            color: $link-colour;
             opacity: 0.75;
-            border-top: 3px dashed $link-colour;
             padding-top: 1vw;
+            line-height: 1.5em;
             @include fluid-type(320px, 1200px, 13px, 27px);
           }
         }

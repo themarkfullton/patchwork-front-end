@@ -27,7 +27,12 @@ const Bestiary = (props) => {
                                     </div>
                                     <div className="patchNameCont">
                                         <h3><span class={patch.texture}>{patch.name}</span> the {patch.temperment}  <span class={patch.texture}>{patch.texture}</span> {patch.pattern}</h3>
+                                    </div>
+                                    <div className="patchCreatorCont">
                                         <h4>Creator: <span class={patch.texture}>{patch.creator}</span></h4>
+                                    </div>
+                                    <div className="patchOptions">
+                                        <button>Speak</button> <button>Recycle</button> <button>Delete</button>
                                     </div>
                                 </div>
                             )
