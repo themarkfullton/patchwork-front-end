@@ -19,7 +19,7 @@ const Bestiary = (props) => {
                 <h2>All Patches Created so far!</h2>
                 <div className="patchesContainer">
                     <p>Loading patches....</p>
-                    <p>{props.patches.length}</p>
+                    <p>Error: {props.error}</p>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@ const Bestiary = (props) => {
                                         <h4>Creator: <span class={patch.texture}>{patch.creator}</span></h4>
                                     </div>
                                     <div className="patchOptions">
-                                        <button onClick={deletePatch(patchId)}>Speak</button> <button onClick={deletePatch(patchId)}>Update</button> <button onClick={deletePatch(patchId)}>Recycle</button>
+                                        <button>Speak</button> <button>Update</button> <button>Recycle</button>
                                     </div>
                                 </div>
                             )
