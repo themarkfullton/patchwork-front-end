@@ -4,13 +4,14 @@ export default {
     getPatches: function () {
         return axios.get("http://localhost:8080/patchwork/patches");
     },
-    createPatch: function (creator, name, pattern, texture, temperment) {
+    createPatch: function (creator, name, pattern, texture, temperment, greeting) {
         return axios.post("http://localhost:8080/patchwork/patch", {
             creator: creator,
             name: name,
             pattern: pattern,
             texture: texture,
-            temperment: temperment
+            temperment: temperment,
+            greeting: greeting
         });
     },
     deletePatch: function (id) {

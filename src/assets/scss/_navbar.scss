@@ -10,7 +10,7 @@
   .navContent {
     width: 90%;
     margin: 0 auto;
-    padding: 1.5vw 0;
+    padding: 1vw 0;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -20,12 +20,12 @@
       width: 30%;
       font-family: $title-font;
       letter-spacing: 0.25em;
-      @include fluid-type(320px, 1200px, 18px, 40px);
+      @include fluid-type(320px, 1200px, 18px, 35px);
     }
     .navRightCol {
       font-family: $title-font;
       justify-content: space-between;
-      @include fluid-type(320px, 1200px, 15px, 40px);
+      @include fluid-type(320px, 1200px, 15px, 35px);
 
       .navItem {
         margin-left: 3vw;

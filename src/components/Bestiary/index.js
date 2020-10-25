@@ -46,7 +46,7 @@ const Bestiary = (props) => {
                                         <h4>Creator: <span class={patch.texture}>{patch.creator}</span></h4>
                                     </div>
                                     <div className="patchOptions">
-                                        <button>Speak</button> <button>Update</button> <button>Recycle</button>
+                                        <button>Speak</button> <button>Update</button> <button onClick={()=>deletePatch(patchId)}>Recycle</button>
                                     </div>
                                 </div>
                             )

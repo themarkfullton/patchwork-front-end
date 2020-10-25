@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@300&family=Freckle+Face&display=swap");
 .headerWrapper {
-  margin-top: 6vw;
+  margin-top: 5vw;
   width: 100%;
 }
 
@@ -140,7 +140,7 @@
 .navWrapper .navContent {
   width: 90%;
   margin: 0 auto;
-  padding: 1.5vw 0;
+  padding: 1vw 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,13 +165,13 @@
 
 @media screen and (min-width: 320px) {
   .navWrapper .navContent .navLeftCol {
-    font-size: calc( 18px + 22 * ((100vw - 320px) / 880));
+    font-size: calc( 18px + 17 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   .navWrapper .navContent .navLeftCol {
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 
@@ -188,13 +188,13 @@
 
 @media screen and (min-width: 320px) {
   .navWrapper .navContent .navRightCol {
-    font-size: calc( 15px + 25 * ((100vw - 320px) / 880));
+    font-size: calc( 15px + 20 * ((100vw - 320px) / 880));
   }
 }
 
 @media screen and (min-width: 1200px) {
   .navWrapper .navContent .navRightCol {
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 
@@ -635,7 +635,7 @@ body p {
 
 body .content {
   width: 80%;
-  margin: 4vw auto;
+  margin: 2vw auto;
   background-color: #15616d;
   padding: 5%;
   border-radius: 25px;
