@@ -1,6 +1,17 @@
 import React from "react";
+import API from "../../utils/API";
 
 const Bestiary = (props) => {
+
+    const deletePatch = (patchId) =>{
+        API.deletePatch(patchId).then((resp) => {
+            alert("Successfully recycled patch!");
+            window.location.reload(false);
+        }).catch((err) => {
+            alert(err);
+        })
+    }
+
     return props.patches.length === 0 ? (
         <div className="bestiaryWrapper">
             <div className="bestiaryContainer">
@@ -8,6 +19,7 @@ const Bestiary = (props) => {
                 <h2>All Patches Created so far!</h2>
                 <div className="patchesContainer">
                     <p>Loading patches....</p>
+                    <p>{props.patches.length}</p>
                 </div>
             </div>
         </div>
@@ -19,6 +31,7 @@ const Bestiary = (props) => {
                     <div className="patchesContainer">
                         {props.patches.map((patch, idx) => {
                             var patchSrc = `/images/patches/${patch.pattern}_${patch.texture}.png`;
+                            var patchId = patch.id;
 
                             return (
                                 <div className="patchContainer" key={idx}>
@@ -33,7 +46,7 @@ const Bestiary = (props) => {
                                         <h4>Creator: <span class={patch.texture}>{patch.creator}</span></h4>
                                     </div>
                                     <div className="patchOptions">
-                                        <button>Speak</button> <button>Update</button> <button>Recycle</button>
+                                        <button onClick={deletePatch(patchId)}>Speak</button> <button onClick={deletePatch(patchId)}>Update</button> <button onClick={deletePatch(patchId)}>Recycle</button>
                                     </div>
                                 </div>
                             )
