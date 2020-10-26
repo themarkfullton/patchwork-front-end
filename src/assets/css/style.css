@@ -450,6 +450,7 @@
 
 .createWrapper .createContent .small {
   width: 40%;
+  text-align: center;
 }
 
 .bestiaryWrapper {
@@ -472,17 +473,53 @@
   width: 100%;
 }
 
+.bestiaryWrapper .bestiaryContainer .patchesContainer button {
+  padding: 1vw;
+  border-radius: 25px;
+  border: 5px #001524 dashed;
+  background-color: #15616d;
+  font-family: "Grandstander", cursive;
+  color: #2ec4b6;
+  font-weight: bolder;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer button {
+  font-size: 9px;
+}
+
+@media screen and (min-width: 320px) {
+  .bestiaryWrapper .bestiaryContainer .patchesContainer button {
+    font-size: calc( 9px + 11 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bestiaryWrapper .bestiaryContainer .patchesContainer button {
+    font-size: 20px;
+  }
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer button:hover {
+  cursor: pointer;
+  color: #15616d;
+  background-color: #2ec4b6;
+  border: none;
+}
+
 .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 45%;
           flex: 1 1 45%;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   text-align: center;
-  margin: 1vw 0.5vw 2vw 0.5vw;
-  padding-top: 5vw;
-  padding-bottom: 5vw;
+  margin: 2vw 0.5vw;
 }
 
 .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer {
@@ -504,10 +541,7 @@
 .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchNameCont {
   font-family: "Freckle Face", cursive;
   color: #001524;
-  border: 3px dashed #001524;
-  padding: 1vw;
   line-height: 1.5em;
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchNameCont {
@@ -566,29 +600,19 @@
 }
 
 .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchOptions button {
-  width: 25%;
-  padding: 0.5vw;
-  border-radius: 25px;
-  border: none;
-  background-color: red;
-  color: #fff;
-  font-family: "Grandstander", cursive;
+  width: 45%;
 }
 
-.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchOptions button {
-  font-size: 18px;
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchOptions .recycleButton {
+  color: #cd3800;
+  background-color: rgba(220, 20, 60, 0.5);
+  border-color: #cd3800;
 }
 
-@media screen and (min-width: 320px) {
-  .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchOptions button {
-    font-size: calc( 18px + 4 * ((100vw - 320px) / 880));
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchOptions button {
-    font-size: 22px;
-  }
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchOptions .recycleButton:hover {
+  cursor: pointer;
+  color: #001524;
+  background-color: #ff0000;
 }
 
 .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchImageContainer {
@@ -603,12 +627,11 @@
   position: relative;
   top: 0;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.5);
   color: #000;
   text-align: center;
   border-radius: 6px;
   padding: 0.5vw;
-  z-index: 12;
   font-family: "Grandstander", cursive;
   font-weight: bolder;
 }
@@ -637,7 +660,7 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: rgba(255, 255, 255, 0.75) transparent transparent transparent;
+  border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
 }
 
 .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchImageContainer img {
@@ -645,6 +668,44 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .changeGreeting {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer input {
+  width: 70%;
+  padding: 0.75vw;
+  border: none;
+  background-color: #001524;
+  color: #fff;
+  border-radius: 5vw;
+  font-family: "Grandstander", cursive;
+  font-weight: bolder;
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer input {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 320px) {
+  .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer input {
+    font-size: calc( 10px + 8 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer input {
+    font-size: 18px;
+  }
 }
 
 body {

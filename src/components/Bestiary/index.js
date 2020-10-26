@@ -12,6 +12,15 @@ const Bestiary = (props) => {
         })
     }
 
+    const changeGreeting = (patchId, greeting) => {
+        API.setGreeting(patchId, greeting).then((resp) => {
+            alert(`Changed greeting to ${greeting}`);
+            window.location.reload(false);
+        }).catch((err) => {
+            alert(err);
+        })
+    }
+
     return props.patches.length === 0 ? (
         <div className="bestiaryWrapper">
             <div className="bestiaryContainer">
@@ -46,7 +55,11 @@ const Bestiary = (props) => {
                                         <h4>Creator: <span class={patch.texture}>{patch.creator}</span></h4>
                                     </div>
                                     <div className="patchOptions">
-                                        <button>Speak</button> <button>Update</button> <button onClick={()=>deletePatch(patchId)}>Recycle</button>
+                                         <button>Update</button> <button className="recycleButton" onClick={()=>deletePatch(patchId)}>Recycle</button>
+                                    </div>
+                                    <div className="changeGreeting">
+                                        <button onClick={() => changeGreeting(patchId)}>Speak</button>
+                                        <input type="text" id="greeting" name="greeting" placeholder="New Greeting" /> 
                                     </div>
                                 </div>
                             )
