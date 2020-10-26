@@ -65,6 +65,33 @@
           height: 50%;
           overflow: hidden;
           line-height: normal;
+
+          .patchGreeting {
+            position: relative;
+            top: 0;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.75);
+            color: #000;
+            text-align: center;
+            border-radius: 6px;
+            padding: 0.5vw;
+            z-index: 12;
+            font-family: $body-font;
+            font-weight: bolder;
+            @include fluid-type(320px, 1200px, 10px, 18px);
+
+            &::after {
+              content: " ";
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              margin-left: -5px;
+              border-width: 5px;
+              border-style: solid;
+              border-color: rgba(255, 255, 255, 0.75) transparent transparent
+                transparent;
+            }
+          }
           img {
             width: 100%;
             height: 100%;

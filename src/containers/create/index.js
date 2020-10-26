@@ -16,6 +16,7 @@ class Create extends React.Component {
             thirdEssence: 6,
             pattern: "none",
             temperment: "none",
+            greeting: "Heya!",
             submitPatch: false
         };
 
@@ -94,25 +95,46 @@ class Create extends React.Component {
 
         switch (trait) {
             case 0:
-                this.setState({ temperment: "Sassy" });
+                this.setState({
+                    temperment: "Sassy",
+                    greeting: "Tell me I'm fabulous!"
+                });
                 break;
             case 1:
-                this.setState({ temperment: "Passionate" });
+                this.setState({
+                    temperment: "Passionate",
+                    greeting: "Sleep is for the dead!"
+                });
                 break;
             case 2:
-                this.setState({ temperment: "Comical" });
+                this.setState({
+                    temperment: "Comical",
+                    greeting: "Boy, am I STUFFED! (Get it.)"
+                });
                 break;
             case 3:
-                this.setState({ temperment: "Despondent" });
+                this.setState({
+                    temperment: "Despondent",
+                    greeting: "Don't worry. I'll recycle myself."
+                });
                 break;
             case 4:
-                this.setState({ temperment: "Analytical" });
+                this.setState({
+                    temperment: "Analytical",
+                    greeting: "A fine simulation we're having today!"
+                });
                 break;
             case 5:
-                this.setState({ temperment: "Idealistic" });
+                this.setState({
+                    temperment: "Idealistic",
+                    greeting: "A grand adventure awaits us!"
+                });
                 break;
             case 6:
-                this.setState({ temperment: "Gentle" });
+                this.setState({
+                    temperment: "Gentle",
+                    greeting: "Every day is a new opportunity."
+                });
                 break;
         }
     }
@@ -178,7 +200,7 @@ class Create extends React.Component {
 
     onPostPatch() {
         if (this.state.name != "?" && this.state.creator != "?") {
-            API.createPatch(this.state.creator, this.state.name, this.state.pattern, this.state.texture, this.state.temperment).then((resp) => {
+            API.createPatch(this.state.creator, this.state.name, this.state.pattern, this.state.texture, this.state.temperment, this.state.greeting).then((resp) => {
                 alert("Created patch!");
                 return <Redirect to='/view' />
             }).catch((err) => {

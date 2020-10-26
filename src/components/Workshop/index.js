@@ -104,13 +104,6 @@ const Workshop = (props) => {
                 </select>
                 <br />
                 <button className="submitBtn" onClick={props.onSubmitPatch}>View My Patch!</button>
-
-                <p><b>Core:</b> {props.core}</p>
-                <p><b>Texture:</b> {props.texture}</p>
-                <p><b>ImgSrc:</b> {props.patchImage}</p>
-                <p><b>First Essence:</b> {props.firstEssence}</p>
-                <p><b>Second Essence:</b> {props.secondEssence}</p>
-                <p><b>Third Essence:</b> {props.thirdEssence}</p>
             </div>
         );
 }

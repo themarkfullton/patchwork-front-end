@@ -36,7 +36,7 @@ const Bestiary = (props) => {
                             return (
                                 <div className="patchContainer" key={idx}>
                                     <div className="patchImageContainer">
-                                        <p>"Patch Greeting here"</p>
+                                        <p className="patchGreeting">{patch.greeting}</p>
                                         <img className="patchImageImage" src={patchSrc} />
                                     </div>
                                     <div className="patchNameCont">

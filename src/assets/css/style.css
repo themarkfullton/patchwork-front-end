@@ -599,6 +599,47 @@
   line-height: normal;
 }
 
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchImageContainer .patchGreeting {
+  position: relative;
+  top: 0;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.5vw;
+  z-index: 12;
+  font-family: "Grandstander", cursive;
+  font-weight: bolder;
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchImageContainer .patchGreeting {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 320px) {
+  .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchImageContainer .patchGreeting {
+    font-size: calc( 10px + 8 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchImageContainer .patchGreeting {
+    font-size: 18px;
+  }
+}
+
+.bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchImageContainer .patchGreeting::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.75) transparent transparent transparent;
+}
+
 .bestiaryWrapper .bestiaryContainer .patchesContainer .patchContainer .patchImageContainer img {
   width: 100%;
   height: 100%;
