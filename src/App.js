@@ -25,6 +25,7 @@ function App() {
         <div className="content">
           <Route exact path="/" component={Splash} />
           <Route exact path="/create" component={Create} />
+          <Route path="/update/:id" component={Update} />
           <Route exact path="/view" component={View} />
         </div>
       </Router>

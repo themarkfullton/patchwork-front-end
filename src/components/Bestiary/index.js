@@ -1,20 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import API from "../../utils/API";
 
 const Bestiary = (props) => {
-
     const deletePatch = (patchId) =>{
         API.deletePatch(patchId).then((resp) => {
             alert("Successfully recycled patch!");
-            window.location.reload(false);
-        }).catch((err) => {
-            alert(err);
-        })
-    }
-
-    const changeGreeting = (patchId, greeting) => {
-        API.setGreeting(patchId, greeting).then((resp) => {
-            alert(`Changed greeting to ${greeting}`);
             window.location.reload(false);
         }).catch((err) => {
             alert(err);
@@ -55,11 +46,7 @@ const Bestiary = (props) => {
                                         <h4>Creator: <span class={patch.texture}>{patch.creator}</span></h4>
                                     </div>
                                     <div className="patchOptions">
-                                         <button>Update</button> <button className="recycleButton" onClick={()=>deletePatch(patchId)}>Recycle</button>
-                                    </div>
-                                    <div className="changeGreeting">
-                                        <button onClick={() => changeGreeting(patchId)}>Speak</button>
-                                        <input type="text" id="greeting" name="greeting" placeholder="New Greeting" /> 
+                                        <NavLink class="" to={"/update/" + patchId}>Update</NavLink> <button className="recycleButton" onClick={()=>deletePatch(patchId)}>Recycle</button>
                                     </div>
                                 </div>
                             )

@@ -25,10 +25,5 @@ export default {
             texture: texture,
             temperment: temperment
         });
-    },
-    setGreeting: function (id, greeting) {
-        return axios.put(`http://localhost:8080/patchwork/patch/${id}`, {
-            greeting: greeting,
-        });
     }
 }
