@@ -3,9 +3,16 @@ import Bestiary from "../../components/Bestiary";
 import API from "../../utils/API";
 
 class View extends React.Component {
-    state = {
+    constructor(props) {
+        super(props);
+        this.state = {
+        currentUpdateId: "",
+        updateMode: false,
         patches: [],
+        }
+        this.toggleUpdate = this.toggleUpdate.bind(this);
     }
+    
 
     componentDidMount() {
         API.getPatches().then((res) => {
@@ -14,11 +21,32 @@ class View extends React.Component {
         window.scrollTo(0, 0);
     }
     
+    toggleUpdate(patchId) {
+        if (!this.state.updateMode) {
+            this.setState({
+                currentUpdateId: patchId,
+                updateMode: true
+            });    
+        } else {
+            this.setState({
+                currentUpdateId: "",
+                updateMode: false
+            })
+        }
+    }
+
     render() {
-        return (
+        return this.state.updateMode === true ? (<div className="viewWrapper">
+                <div className="viewContent">
+                <p>Update Mode</p>
+                <p>{this.state.currentUpdateId}</p>
+                <button toggleUpdate={() => this.toggleUpdate()}>Toggle Update!</button>
+                </div>
+            </div>
+        ) : (
             <div className="viewWrapper">
                 <div className="viewContent">
-                    <Bestiary patches={this.state.patches} />
+                    <Bestiary patches={this.state.patches} toggleUpdate={this.toggleUpdate} />
                 </div>
             </div>
         )

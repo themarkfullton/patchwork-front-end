@@ -46,7 +46,10 @@ const Bestiary = (props) => {
                                         <h4>Creator: <span class={patch.texture}>{patch.creator}</span></h4>
                                     </div>
                                     <div className="patchOptions">
-                                        <NavLink class="" to={"/update/" + patchId}>Update</NavLink> <button className="recycleButton" onClick={()=>deletePatch(patchId)}>Recycle</button>
+                                        <button onClick={props.toggleUpdate(patchId)}>
+                                            Update
+                                        </button>
+                                        <button className="recycleButton" onClick={() => deletePatch(patchId)}>Recycle</button>
                                     </div>
                                 </div>
                             )
