@@ -7,6 +7,7 @@ const UpdateWorkshop = (props) => {
     return (
         <div>
             <p>Update Workshop</p>
+            <p>{props.patchId}</p>
         </div>
     )
 }

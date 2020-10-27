@@ -30,9 +30,20 @@ class View extends React.Component {
     }
 
     toggleUpdate(patchId) {
-        this.setState({
-            currentUpdateId: patchId
-        });
+        switch (this.state.updatingPatch) {
+            case true:
+                this.setState({
+                    currentUpdateId: "",
+                    updatingPatch: false
+                });
+                break;
+            case false:
+                this.setState({
+                    currentUpdateId: patchId,
+                    updatingPatch: true
+                });
+                break;
+        }
     }
 
     togglePage() {
@@ -40,7 +51,7 @@ class View extends React.Component {
             case false:
                 return <Bestiary patches={this.state.patches} toggleUpdate={this.toggleUpdate} deletePatch={this.deletePatch} />
             case true:
-                return <UpdateWorkshop />
+                return <UpdateWorkshop patchId={this.state.currentUpdateId} />
         }
     }
 
