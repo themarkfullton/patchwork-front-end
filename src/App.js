@@ -7,9 +7,9 @@ import Header from "./components/Header";
 
 //==========| Containers \===================>
 
-import Splash from "./containers/Splash";
-import Create from "./containers/Create";
-import View from "./containers/View";
+import Splash from "./containers/SplashPage";
+import Create from "./containers/CreatePage";
+import View from "./containers/ViewPage";
 
 //==========| Styles \===================>
 import "./assets/css/reset.css";
