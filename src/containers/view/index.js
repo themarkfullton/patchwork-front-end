@@ -37,7 +37,7 @@ class View extends React.Component {
         return (
             <div className="viewWrapper">
                 <div className="viewContent">
-                    <UpdateWorkshop currentUpdateId={this.state.currentUpdateId} toggleUpdate={this.toggleUpdate} showUpdate={this.state.showUpdate} patches={this.state.patches}/>
+                    <UpdateWorkshop toggleUpdate={this.toggleUpdate} currentUpdateId={this.state.currentUpdateId} name={this.state.name}creator={this.state.creator} pattern={this.state.pattern} texture={this.state.texture} temperment={this.state.temperment} greeting={this.state.greeting} updatingPatch={this.state.updatingPatch} patches={this.state.patches}/>
                 </div>
             </div>
         );
