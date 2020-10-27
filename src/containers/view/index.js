@@ -1,5 +1,4 @@
 import React from "react";
-import UpdateWorkshop from "../../components/UpdateWorkshop";
 import API from "../../utils/API";
 
 class View extends React.Component {
@@ -41,4 +40,14 @@ class View extends React.Component {
             alert(err);
         })
     }
+
+    render() {
+        return (
+            <div>
+                <p>{this.state.patches}</p>
+            </div>
+        )
+    }
 }
+
+export default View;
