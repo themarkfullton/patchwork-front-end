@@ -9,12 +9,6 @@ class View extends React.Component {
         this.state = {
             patches: [],
             currentUpdateId: "",
-            name: "",
-            creator: "",
-            pattern: "",
-            texture: "",
-            temperment: "",
-            greeting: "",
             updatingPatch: false,
         };
 
