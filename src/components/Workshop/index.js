@@ -14,7 +14,6 @@ const Workshop = (props) => {
             <h1>It's alive!!</h1>
             <br />
             <p>Here's your new friend! If you like them, give them a name! If not, recycle the parts and remake them!</p>
-            <p>{props.patchImage}</p>
             <div className="workshopPatchContainer">
                 <div className="wsPatchImageCont">
                     <img className="wsPatchImageImage" src={patchSrc} />
