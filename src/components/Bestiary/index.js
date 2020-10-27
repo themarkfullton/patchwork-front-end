@@ -36,7 +36,7 @@ const Bestiary = (props) => {
                                         <h4>Creator: <span class={patch.texture}>{patch.creator}</span></h4>
                                     </div>
                                     <div className="patchOptions">
-                                        <button onClick={() => props.toggleUpdate(patchId, patch.name,  patch.pattern, patch.texture, patch.greeting, patch.temperment)}>
+                                        <button onClick={() => props.toggleUpdate(patchId, patch.creator, patch.name,  patch.pattern, patch.texture, patch.greeting, patch.temperment)}>
                                             Update
                                         </button>
                                         <button className="recycleButton" onClick={() => props.deletePatch(patchId)}>Recycle</button>

@@ -60,6 +60,10 @@ const UpdateWorkshop = (props) => {
                             })}
                         </select>
                     </div>
+                    <div className="formGroup">
+                        <label htmlFor="name">Greeting</label>
+                        <input type="text" className="form-control" value={props.greeting} placeholder={props.greeting} onChange={props.onGreetingChange} />
+                    </div>
                     <button onClick={props.updatePatch}>Update {props.name}</button>
                 </div>
             </div>

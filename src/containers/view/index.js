@@ -10,6 +10,7 @@ class View extends React.Component {
             patches: [],
             currentUpdateId: "",
             name: "",
+            creator: "",
             pattern: "",
             texture: "",
             temperment: "",
@@ -34,11 +35,12 @@ class View extends React.Component {
         }).catch((err) => this.setState({ error: err.items }));
     }
 
-    toggleUpdate(patchId, name, pattern, texture, greeting, temperment) {
+    toggleUpdate(patchId, creator, name, pattern, texture, greeting, temperment) {
         switch (this.state.updatingPatch) {
             case true:
                 this.setState({
                     currentUpdateId: "",
+                    creator: "",
                     name: "",
                     pattern: "",
                     texture: "",
@@ -51,6 +53,7 @@ class View extends React.Component {
                 this.setState({
                     currentUpdateId: patchId,
                     name: name,
+                    creator: creator,
                     pattern: pattern,
                     texture: texture,
                     greeting: greeting,
@@ -80,9 +83,10 @@ class View extends React.Component {
     }
 
     updatePatch = () => {
-        API.updatePatch(this.state.currentUpdateId, this.state.name, this.state.pattern, this.state.texture, this.state.temperment, this.state.greeting).then((resp) => {
+        API.updatePatch(this.state.currentUpdateId, this.state.creator, this.state.name, this.state.pattern, this.state.texture, this.state.temperment, this.state.greeting).then((resp) => {
             alert("Successfully updated " + this.state.name + "!");
             this.toggleUpdate();
+            window.location.reload(false);
         }).catch((err) => {
             alert(err);
         })
@@ -101,7 +105,8 @@ class View extends React.Component {
     }
 
     onTempermentChange(e) {
-        this.setState({ temperment: e.target.value });
+        this.setState({ temperment: e.target.value,
+         });
     }
 
     onGreetingChange(e) {
