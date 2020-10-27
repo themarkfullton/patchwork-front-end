@@ -1,6 +1,8 @@
 import React from "react";
 
 const Bestiary = (props) => {
+    var totalPatchNum = props.patches;
+    totalPatchNum = totalPatchNum.length;
 
     return props.patches.length === 0 ? (
         <div className="bestiaryWrapper">
@@ -9,7 +11,6 @@ const Bestiary = (props) => {
                 <h2>All Patches Created so far!</h2>
                 <div className="patchesContainer">
                     <p>Loading patches....</p>
-                    <p>Error: {props.error}</p>
                 </div>
             </div>
         </div>
@@ -17,7 +18,7 @@ const Bestiary = (props) => {
             <div className="bestiaryWrapper">
                 <div className="bestiaryContainer">
                     <h1>Bestiary</h1>
-                    <h2>All Patches Created so far!</h2>
+                    <h2>All {totalPatchNum} Patches!</h2>
                     <div className="patchesContainer">
                         {props.patches.map((patch, idx) => {
                             var patchSrc = `/images/patches/${patch.pattern}_${patch.texture}.png`;
