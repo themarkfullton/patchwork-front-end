@@ -1,0 +1,30 @@
+[
+    {
+        "name":"Sassy",
+        "greeting":"Tell me I'm fabulous!"
+    },
+    {
+        "name":"Passionate",
+        "greeting":"Sleep is for the dead!"
+    },
+    {
+        "name":"Comical",
+        "greeting":"Boy, am I STUFFED! (Get it.)"
+    },
+    {
+        "name":"Despondent",
+        "greeting":"Don't worry; I'll recycle myself."
+    },
+    {
+        "name":"Analytical",
+        "greeting":"A fine simulation we're having today!"
+    },
+    {
+        "name":"Idealistic",
+        "greeting":"A grand adventure awaits us!"
+    },
+    {
+        "name":"Gentle",
+        "greeting":"Every day is a new opportunity"
+    }
+]

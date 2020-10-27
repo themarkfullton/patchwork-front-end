@@ -9,7 +9,6 @@ class View extends React.Component {
         this.state = {
             patches: [],
             currentUpdateId: "",
-            patchSrc: "",
             name: "",
             pattern: "",
             texture: "",
@@ -21,6 +20,11 @@ class View extends React.Component {
         this.toggleUpdate = this.toggleUpdate.bind(this);
         this.deletePatch = this.deletePatch.bind(this);
         this.togglePage = this.togglePage.bind(this);
+        this.onNameChange = this.onNameChange.bind(this);
+        this.onPatternChange = this.onPatternChange.bind(this);
+        this.onTextureChange = this.onTextureChange.bind(this);
+        this.onTempermentChange = this.onTempermentChange.bind(this);
+        this.onGreetingChange = this.onGreetingChange.bind(this);
     }
 
     componentDidMount() {
@@ -29,13 +33,11 @@ class View extends React.Component {
         }).catch((err) => this.setState({ error: err.items }));
     }
 
-    // patchId, patchSrc, patch.name,  patch.pattern, patch.texture, patch.greeting, patch.temperment
-    toggleUpdate(patchId, patchSrc, name, pattern, texture, greeting, temperment) {
+    toggleUpdate(patchId, name, pattern, texture, greeting, temperment) {
         switch (this.state.updatingPatch) {
             case true:
                 this.setState({
                     currentUpdateId: "",
-                    patchSrc: "",
                     name: "",
                     pattern: "",
                     texture: "",
@@ -47,7 +49,6 @@ class View extends React.Component {
             case false:
                 this.setState({
                     currentUpdateId: patchId,
-                    patchSrc: patchSrc,
                     name: name,
                     pattern: pattern,
                     texture: texture,
@@ -64,7 +65,7 @@ class View extends React.Component {
             case false:
                 return <Bestiary patches={this.state.patches} toggleUpdate={this.toggleUpdate} deletePatch={this.deletePatch} />
             case true:
-                return <UpdateWorkshop patchId={this.state.currentUpdateId} patchSrc={this.state.patchSrc} name={this.state.name} pattern={this.state.pattern} texture={this.state.texture} greeting={this.state.greeting} temperment={this.state.temperment} toggleUpdate={this.toggleUpdate} />
+                return <UpdateWorkshop patchId={this.state.currentUpdateId} name={this.state.name} pattern={this.state.pattern} texture={this.state.texture} greeting={this.state.greeting} temperment={this.state.temperment} toggleUpdate={this.toggleUpdate} onNameChange={this.onNameChange} onPatternChange={this.onPatternChange} onTextureChange={this.onTextureChange} onTempermentChange={this.onTempermentChange} onGreetingChange={this.onGreetingChange} />
         }
     }
 
@@ -76,6 +77,28 @@ class View extends React.Component {
             alert(err);
         })
     }
+
+    onNameChange(e) {
+        this.setState({ name: e.target.value });
+    }
+
+    onPatternChange(e) {
+        this.setState({ pattern: e.target.value }); 
+    }
+
+    onTextureChange(e) {
+        this.setState({ texture: e.target.value });
+    }
+
+    onTempermentChange(e) {
+        this.setState({ temperment: e.target.value });
+    }
+
+    onGreetingChange(e) {
+        this.setState({ greeting: e.target.value });
+    }
+
+
 
 
 
