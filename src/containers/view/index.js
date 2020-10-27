@@ -9,6 +9,12 @@ class View extends React.Component {
         this.state = {
             patches: [],
             currentUpdateId: "",
+            patchSrc: "",
+            name: "",
+            pattern: "",
+            texture: "",
+            temperment: "",
+            greeting: "",
             updatingPatch: false,
         };
 
@@ -23,17 +29,30 @@ class View extends React.Component {
         }).catch((err) => this.setState({ error: err.items }));
     }
 
-    toggleUpdate(patchId) {
+    // patchId, patchSrc, patch.name,  patch.pattern, patch.texture, patch.greeting, patch.temperment
+    toggleUpdate(patchId, patchSrc, name, pattern, texture, greeting, temperment) {
         switch (this.state.updatingPatch) {
             case true:
                 this.setState({
                     currentUpdateId: "",
+                    patchSrc: "",
+                    name: "",
+                    pattern: "",
+                    texture: "",
+                    greeting: "",
+                    temperment: "",
                     updatingPatch: false
                 });
                 break;
             case false:
                 this.setState({
                     currentUpdateId: patchId,
+                    patchSrc: patchSrc,
+                    name: name,
+                    pattern: pattern,
+                    texture: texture,
+                    greeting: greeting,
+                    temperment: temperment,
                     updatingPatch: true
                 });
                 break;
@@ -45,7 +64,7 @@ class View extends React.Component {
             case false:
                 return <Bestiary patches={this.state.patches} toggleUpdate={this.toggleUpdate} deletePatch={this.deletePatch} />
             case true:
-                return <UpdateWorkshop patchId={this.state.currentUpdateId} />
+                return <UpdateWorkshop patchId={this.state.currentUpdateId} patchSrc={this.state.patchSrc} name={this.state.name} pattern={this.state.pattern} texture={this.state.texture} greeting={this.state.greeting} temperment={this.state.temperment} toggleUpdate={this.toggleUpdate} />
         }
     }
 
