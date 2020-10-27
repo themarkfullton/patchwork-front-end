@@ -139,3 +139,87 @@
     }
   }
 }
+
+.workshopPatchContainer {
+  width: 100%;
+
+  .wsPatchImageCont {
+    text-align: center;
+    height: 40vw;
+    margin: 3vw;
+
+    .wsPatchImageImage {
+      height: 90%;
+    }
+  }
+
+  .wsTitle {
+    width: 100%;
+    text-align: center;
+    font-family: $title-font;
+    font-weight: bolder;
+    color: $link-colour;
+    letter-spacing: 0.25em;
+    margin-bottom: 5vw;
+    @include fluid-type(320px, 1200px, 19px, 27px);
+  }
+
+  .wsName {
+    font-family: $body-font;
+
+    .formGroup {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 1vw;
+      @include fluid-type(320px, 1200px, 18px, 25px);
+      label {
+        align-self: center;
+      }
+      input {
+        width: 80%;
+        padding: 2vw;
+        border: none;
+        background-color: $link-colour;
+        color: #fff;
+        border-radius: 5vw;
+        font-family: $body-font;
+        font-weight: bolder;
+        @include fluid-type(320px, 1200px, 13px, 18px);
+      }
+      .dropdown {
+        width: 100%;
+        padding: 1vw;
+        margin: 0 auto;
+        margin-bottom: 1vw;
+        font-family: $body-font;
+        font-weight: bolder;
+        background-color: $tertiary-colour;
+        border-radius: 25px;
+        @include fluid-type(320px, 1200px, 20px, 30px);
+      }
+    }
+
+    button {
+      width: 100%;
+      margin-top: 3vw;
+      margin-bottom: 1vw;
+      padding: 1vw;
+      border-radius: 25px;
+      border: 5px $background-colour dashed;
+      background-color: $secondary-colour;
+      font-family: $body-font;
+      color: $tertiary-colour;
+      font-weight: bolder;
+      @include transition-time;
+      @include fluid-type(320px, 1200px, 20px, 25px);
+
+      &:hover {
+        cursor: pointer;
+        color: $secondary-colour;
+        background-color: $tertiary-colour;
+        border: none;
+      }
+    }
+  }
+}

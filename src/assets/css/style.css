@@ -708,6 +708,175 @@
   }
 }
 
+.workshopPatchContainer {
+  width: 100%;
+}
+
+.workshopPatchContainer .wsPatchImageCont {
+  text-align: center;
+  height: 40vw;
+  margin: 3vw;
+}
+
+.workshopPatchContainer .wsPatchImageCont .wsPatchImageImage {
+  height: 90%;
+}
+
+.workshopPatchContainer .wsTitle {
+  width: 100%;
+  text-align: center;
+  font-family: "Freckle Face", cursive;
+  font-weight: bolder;
+  color: #001524;
+  letter-spacing: 0.25em;
+  margin-bottom: 5vw;
+}
+
+.workshopPatchContainer .wsTitle {
+  font-size: 19px;
+}
+
+@media screen and (min-width: 320px) {
+  .workshopPatchContainer .wsTitle {
+    font-size: calc( 19px + 8 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .workshopPatchContainer .wsTitle {
+    font-size: 27px;
+  }
+}
+
+.workshopPatchContainer .wsName {
+  font-family: "Grandstander", cursive;
+}
+
+.workshopPatchContainer .wsName .formGroup {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1vw;
+}
+
+.workshopPatchContainer .wsName .formGroup {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 320px) {
+  .workshopPatchContainer .wsName .formGroup {
+    font-size: calc( 18px + 7 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .workshopPatchContainer .wsName .formGroup {
+    font-size: 25px;
+  }
+}
+
+.workshopPatchContainer .wsName .formGroup label {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.workshopPatchContainer .wsName .formGroup input {
+  width: 80%;
+  padding: 2vw;
+  border: none;
+  background-color: #001524;
+  color: #fff;
+  border-radius: 5vw;
+  font-family: "Grandstander", cursive;
+  font-weight: bolder;
+}
+
+.workshopPatchContainer .wsName .formGroup input {
+  font-size: 13px;
+}
+
+@media screen and (min-width: 320px) {
+  .workshopPatchContainer .wsName .formGroup input {
+    font-size: calc( 13px + 5 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .workshopPatchContainer .wsName .formGroup input {
+    font-size: 18px;
+  }
+}
+
+.workshopPatchContainer .wsName .formGroup .dropdown {
+  width: 100%;
+  padding: 1vw;
+  margin: 0 auto;
+  margin-bottom: 1vw;
+  font-family: "Grandstander", cursive;
+  font-weight: bolder;
+  background-color: #2ec4b6;
+  border-radius: 25px;
+}
+
+.workshopPatchContainer .wsName .formGroup .dropdown {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 320px) {
+  .workshopPatchContainer .wsName .formGroup .dropdown {
+    font-size: calc( 20px + 10 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .workshopPatchContainer .wsName .formGroup .dropdown {
+    font-size: 30px;
+  }
+}
+
+.workshopPatchContainer .wsName button {
+  width: 100%;
+  margin-top: 3vw;
+  margin-bottom: 1vw;
+  padding: 1vw;
+  border-radius: 25px;
+  border: 5px #001524 dashed;
+  background-color: #15616d;
+  font-family: "Grandstander", cursive;
+  color: #2ec4b6;
+  font-weight: bolder;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.workshopPatchContainer .wsName button {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 320px) {
+  .workshopPatchContainer .wsName button {
+    font-size: calc( 20px + 5 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .workshopPatchContainer .wsName button {
+    font-size: 25px;
+  }
+}
+
+.workshopPatchContainer .wsName button:hover {
+  cursor: pointer;
+  color: #15616d;
+  background-color: #2ec4b6;
+  border: none;
+}
+
 body {
   background-color: #001524;
   width: 100vw;

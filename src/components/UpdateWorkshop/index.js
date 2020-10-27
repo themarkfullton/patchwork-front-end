@@ -19,7 +19,6 @@ const UpdateWorkshop = (props) => {
                 </div>
                 <div className="wsTitle">
                     <h3><span className={props.texture}>{props.name}</span> the {props.temperment} <span className={props.texture}>{props.texture}</span> {props.pattern}</h3>
-                    <h4>{props.greeting}</h4>
                 </div>
                 <div className="wsName">
                     <div className="formGroup">
