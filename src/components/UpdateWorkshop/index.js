@@ -1,19 +1,17 @@
 import React from "react";
+import Bestiary from "../Bestiary";
 import { NavLink } from "react-router-dom";
 
 const UpdateWorkshop = (props) => {
-    var patchSrc = `/images/patches/${props.pattern}_${props.texture}.png`;
-
-    return props.currentUpdateId === "" ? (
-        <>
-        <h1>Unassigned</h1>
-            <button onClick={()=> props.toggleUpdate("I changed")}>Toggle</button>
-        </>
+    return props.showUpdate === false ? (
+        <div className="updateWorkshopContainer">
+            <Bestiary patches={props.patches} toggleUpdate={props.toggleUpdate} />
+        </div>
     ) : (
-            <>
-        <h1>{props.currentUpdateId}</h1>
-            <button onClick={()=> props.toggleUpdate("")}>Toggle</button>
-            </>
+        <div className="updateWorkshopContainer">
+                <p>Why are you loading this one?</p>
+                <p>{props.currentUpdateId}</p>
+        </div>
         )
 }
 

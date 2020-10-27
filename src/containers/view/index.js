@@ -7,6 +7,13 @@ class View extends React.Component {
         super(props);
         this.state = {
             currentUpdateId: "",
+            name: "",
+            creator: "",
+            pattern: "",
+            texture: "",
+            temperment: "",
+            greeting: "",            
+            updatingPatch: false,
             patches: []
         };
 
@@ -30,7 +37,7 @@ class View extends React.Component {
         return (
             <div className="viewWrapper">
                 <div className="viewContent">
-                    <UpdateWorkshop currentUpdateId={this.state.currentUpdateId} toggleUpdate={this.toggleUpdate} />
+                    <UpdateWorkshop currentUpdateId={this.state.currentUpdateId} toggleUpdate={this.toggleUpdate} showUpdate={this.state.showUpdate} patches={this.state.patches}/>
                 </div>
             </div>
         );
@@ -38,3 +45,5 @@ class View extends React.Component {
 }
 
 export default View;
+
+// View -> Update
