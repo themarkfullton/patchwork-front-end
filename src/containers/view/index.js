@@ -25,6 +25,7 @@ class View extends React.Component {
         this.onTextureChange = this.onTextureChange.bind(this);
         this.onTempermentChange = this.onTempermentChange.bind(this);
         this.onGreetingChange = this.onGreetingChange.bind(this);
+        this.updatePatch = this.updatePatch.bind(this);
     }
 
     componentDidMount() {
@@ -65,7 +66,7 @@ class View extends React.Component {
             case false:
                 return <Bestiary patches={this.state.patches} toggleUpdate={this.toggleUpdate} deletePatch={this.deletePatch} />
             case true:
-                return <UpdateWorkshop patchId={this.state.currentUpdateId} name={this.state.name} pattern={this.state.pattern} texture={this.state.texture} greeting={this.state.greeting} temperment={this.state.temperment} toggleUpdate={this.toggleUpdate} onNameChange={this.onNameChange} onPatternChange={this.onPatternChange} onTextureChange={this.onTextureChange} onTempermentChange={this.onTempermentChange} onGreetingChange={this.onGreetingChange} />
+                return <UpdateWorkshop patchId={this.state.currentUpdateId} name={this.state.name} pattern={this.state.pattern} texture={this.state.texture} greeting={this.state.greeting} temperment={this.state.temperment} toggleUpdate={this.toggleUpdate} onNameChange={this.onNameChange} onPatternChange={this.onPatternChange} onTextureChange={this.onTextureChange} onTempermentChange={this.onTempermentChange} onGreetingChange={this.onGreetingChange} updatePatch={this.updatePatch} />
         }
     }
 
@@ -73,6 +74,15 @@ class View extends React.Component {
         API.deletePatch(patchId).then((resp) => {
             alert("Successfully recycled patch");
             window.location.reload(false);
+        }).catch((err) => {
+            alert(err);
+        })
+    }
+
+    updatePatch = () => {
+        API.updatePatch(this.state.currentUpdateId, this.state.name, this.state.pattern, this.state.texture, this.state.temperment, this.state.greeting).then((resp) => {
+            alert("Successfully updated " + this.state.name + "!");
+            this.toggleUpdate();
         }).catch((err) => {
             alert(err);
         })

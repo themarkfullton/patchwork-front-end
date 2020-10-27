@@ -27,32 +27,40 @@ const UpdateWorkshop = (props) => {
                         <input type="text" className="form-control" value={props.name} onChange={props.onNameChange} required />
                     </div>
                     <div className="formGroup">
-                        <select className="dropdown" onChange={props.onPatternChange}>
+                        <select className="dropdown" onChange={props.onPatternChange} selected="Select Pattern">
                             {PatternList.map((pattern, idx) => {
-                                return (
+                                return pattern.name == props.pattern ? (
+                                    <option className="dropOpt" key={idx} value={pattern.name} selected="selected">{pattern.name}</option>
+                                ) : (
                                     <option className="dropOpt" key={idx} value={pattern.name}>{pattern.name}</option>
                                 )
                             })}
                         </select>
                     </div>
                     <div className="formGroup">
-                        <select className="dropdown" onChange={props.onTextureChange}>
+                        <select className="dropdown" onChange={props.onTextureChange} selected="Select Texture">
                             {TextureList.map((texture, idx) => {
-                                return (
+                                return texture.name == props.texture ? (
+                                    <option className="dropOpt" key={idx} value={texture.name} selected="selected">{texture.name}</option>
+                                ) :
+                                    (
                                     <option className="dropOpt" key={idx} value={texture.name}>{texture.name}</option>
                                 )
                             })}
                         </select>
                     </div>
                     <div className="formGroup">
-                        <select className="dropdown" onChange={props.onTempermentChange}>
+                        <select className="dropdown" onChange={props.onTempermentChange} selected="Select Temperment">
                             {TempermentList.map((temperment, idx) => {
-                                return (
+                                return temperment.name == props.temperment ? (
+                                    <option className="dropOpt" key={idx} value={temperment.name} selected="selected">{temperment.name}</option>
+                                ) : (
                                     <option className="dropOpt" key={idx} value={temperment.name}>{temperment.name}</option>
                                 )
                             })}
                         </select>
                     </div>
+                    <button onClick={props.updatePatch}>Update {props.name}</button>
                 </div>
             </div>
         </div>
