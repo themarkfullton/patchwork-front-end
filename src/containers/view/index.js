@@ -1,5 +1,7 @@
 import React from "react";
 import API from "../../utils/API";
+import Bestiary from "../../components/Bestiary";
+import UpdateWorkshop from "../../components/UpdateWorkshop";
 
 class View extends React.Component {
     constructor(props) {
@@ -18,11 +20,12 @@ class View extends React.Component {
 
         this.toggleUpdate = this.toggleUpdate.bind(this);
         this.deletePatch = this.deletePatch.bind(this);
+        this.togglePage = this.togglePage.bind(this);
     }
 
     componentDidMount() {
         API.getPatches().then((res) => {
-            this.setState({ patches: res.data })
+            this.setState({ patches: res.data });
         }).catch((err) => this.setState({ error: err.items }));
     }
 
@@ -30,6 +33,15 @@ class View extends React.Component {
         this.setState({
             currentUpdateId: patchId
         });
+    }
+
+    togglePage() {
+        switch (this.state.updatingPatch) {
+            case false:
+                return <Bestiary patches={this.state.patches} toggleUpdate={this.toggleUpdate} deletePatch={this.deletePatch} />
+            case true:
+                return <UpdateWorkshop />
+        }
     }
 
     deletePatch = (patchId) => {
@@ -41,10 +53,12 @@ class View extends React.Component {
         })
     }
 
+
+
     render() {
         return (
-            <div>
-                <p>{this.state.patches}</p>
+            <div className="viewWrapper">
+                {this.togglePage()}
             </div>
         )
     }

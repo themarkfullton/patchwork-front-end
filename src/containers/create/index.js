@@ -202,6 +202,7 @@ class Create extends React.Component {
         if (this.state.name != "?" && this.state.creator != "?") {
             API.createPatch(this.state.creator, this.state.name, this.state.pattern, this.state.texture, this.state.temperment, this.state.greeting).then((resp) => {
                 alert("Created patch!");
+                window.scrollTo(0, 0);
                 return <Redirect to='/view' />
             }).catch((err) => {
                 alert(err);

@@ -1,16 +1,6 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import API from "../../utils/API";
+import React from "react";
 
 const Bestiary = (props) => {
-    const deletePatch = (patchId) =>{
-        API.deletePatch(patchId).then((resp) => {
-            alert("Successfully recycled patch!");
-            window.location.reload(false);
-        }).catch((err) => {
-            alert(err);
-        })
-    }
 
     return props.patches.length === 0 ? (
         <div className="bestiaryWrapper">
@@ -46,10 +36,10 @@ const Bestiary = (props) => {
                                         <h4>Creator: <span class={patch.texture}>{patch.creator}</span></h4>
                                     </div>
                                     <div className="patchOptions">
-                                        <button onClick={props.toggleUpdate(patchId)}>
+                                        <button onClick={() => props.toggleUpdate(patchId)}>
                                             Update
                                         </button>
-                                        <button className="recycleButton" onClick={() => deletePatch(patchId)}>Recycle</button>
+                                        <button className="recycleButton" onClick={() => props.deletePatch(patchId)}>Recycle</button>
                                     </div>
                                 </div>
                             )
