@@ -24,6 +24,7 @@ class Splash extends React.Component {
                     <hr />
                     <br />
                     <h2>Updates</h2>
+                    <p><b>10/28 - </b>Most basic version now live on Heroku. Still have to add page "refresh" after patch is added and API call completed. (Currently loads regardless so new patch either does or does not appear)</p>
                     <p><b>10/22 - </b>Preparing the most basic version of patchwork for Heroku deploy!</p>
                 </div>
             </div>

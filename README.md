@@ -4,7 +4,7 @@
 
 #### [Patchwork Back End](https://github.com/themarkfullton/patchwork-back-end) (Java + Spring; MongoDB)
 
-**LINK TO LIVE:**
+**LINK TO LIVE:** https://patchwork-friends.herokuapp.com/
 
 Full Stack. Virtual Pet game meets Frankenstein. Create your own doll companions and fight a faceless evil. Still under construction, but you can still create, edit, and delete "patches" (pets).
 
@@ -21,3 +21,7 @@ Virtual Pet games used to be all the rage and I was curious to figure out how th
 This is still under construction. Still need to add authentication, items, exploration, battle, random events, and unlockable textures/patterns.
 
 ## Screenshots
+
+<img src="Screenshot1.PNG" >
+<img src="Screenshot2.PNG" >
+<img src="Screenshot3.PNG" >
